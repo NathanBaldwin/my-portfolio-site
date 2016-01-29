@@ -1,3 +1,5 @@
-# Pinterest
+# My Personal Portfolio Website
 
-My project for NSS front end course.
+run npm install gsap (in lib directory) to get Greensock Animation Library
+
+
