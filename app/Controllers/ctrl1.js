@@ -37,10 +37,72 @@ signature.style.strokeDasharray = signature.style.strokeDashoffset = signature.g
 
 const tl = new TimelineLite();
 
-tl.to(backSplash, 2.3, {strokeDashoffset: 0})
-.to(signature, 1.6, {strokeDashoffset: 0, delay: 0.0, ease: SlowMo.ease.config(0.3, 0.4, false)})
-.from('.btn', 1.7, {opacity:0, delay: 0.3, ease: Power1.easeOut});
+tl.to(backSplash, 3, {strokeDashoffset: 0})
+.to(signature, 2.5, {strokeDashoffset: 0, delay: 0.0, ease: SlowMo.ease.config(0.3, 0.4, false)})
+.from('.sub-ttl', 1.7, {opacity:0, delay: 0.3, ease: Power1.easeOut});
 
+$scope.scrollToPortfolio = function() {
+  console.log("you clicked scrollToPortfolio!");
+  var portfolioSec = document.getElementById("portfolio");
+  var posTop = portfolioSec.offsetTop;
+  console.log("posTop", posTop);
+  // TweenLite.to(window, 2, {scrollTo:{y:400}, ease:Power2.easeOut});
+  TweenLite.to(window, 1.2, {scrollTo:{y:posTop}, ease:Power3.easeOut});
+}
+
+$(function () { // wait for document ready
+    // init
+    var scrollController = new ScrollMagic.Controller();
+
+    // define movement of panels
+    var wipeAnimation = new TimelineMax()
+      // animate to second panel
+      // .to("#slideContainer", 0.5, {z: -150})    // move back in 3D space
+      .to("#slideContainer", 1,   {x: "-25%"})  // move in to first panel
+      // .to("#slideContainer", 0.5, {z: 0})       // move back to origin in 3D space
+      // animate to third panel
+      // .to("#slideContainer", 0.5, {z: -150, delay: 1})
+      .to("#slideContainer", 1,   {x: "-50%"})
+      // .to("#slideContainer", 0.5, {z: 0})
+      // animate to forth panel
+      // .to("#slideContainer", 0.5, {z: -150, delay: 1})
+      .to("#slideContainer", 1,   {x: "-75%"})
+      // .to("#slideContainer", 0.5, {z: 0});
+
+    // create scene to pin and link animation
+    new ScrollMagic.Scene({
+        triggerElement: "#portfolio",
+        triggerHook: "onLeave",
+        duration: "500%"
+      })
+      .setPin("#pinContainer")
+      .setTween(wipeAnimation)
+      .addIndicators() // add indicators (requires plugin)
+      .addTo(scrollController);
+  });
+
+// $scope.horizScroll = function() {
+//   console.log("you scolled!");
+// }
+
+// angular.element($window).bind('scroll', function () {
+//   console.log('Gogo!'); //works!
+// });
+
+
+// var portfolioList = document.getElementsByClassName('.portfolio-list')
+
+// $(document).ready(function() { 
+//   $(".portfolio-list").bind("scroll",function(event){ 
+//     event.preventDefault();
+//     console.log("testing event");
+//     var target = $(this).attr("href"); 
+//     $("html, body").stop().animate({ 
+//       scrollLeft: $(target).offset().left, 
+//       scrollTop: $(target).offset().top
+//       }, 1200); 
+//   }); 
+// });
 
 
 

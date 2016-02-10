@@ -1,22 +1,54 @@
-video#bgvid { 
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    min-width: 100%;
-    min-height: 100%;
-    width: auto;
-    height: auto;
-    z-index: -100;
-    -ms-transform: translateX(-50%) translateY(-50%);
-    -moz-transform: translateX(-50%) translateY(-50%);
-    -webkit-transform: translateX(-50%) translateY(-50%);
-    transform: translateX(-50%) translateY(-50%);
-    background: url(polina.jpg) no-repeat;
-    background-size: cover; 
-}
+#home {
+  background-color: #292929;
+  height: 840px; }
 
-#test {
-    color: #000000;
-}
+@font-face {
+  font-family: titles;
+  src: url(../lib/fonts/basictitlefont.ttf); }
+h3 {
+  font-family: titles;
+  color: #F7484E;
+  cursor: pointer;
+  text-align: center;
+  font-size: 175%; }
+
+#title-container {
+  padding-top: 12%;
+  padding-left: 8%;
+  padding-right: 14%; }
+
+#subtitles-container {
+  margin-top: 3%;
+  padding-left: 15%;
+  padding-right: 10%; }
+
+#portfolio {
+  height: 4200px;
+  padding: 20px;
+  background-color: #E6A400; }
+
+#pinContainer {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  -webkit-perspective: 1000;
+  perspective: 1000; }
+
+#slideContainer {
+  width: 400%;
+  /* to contain 4 panels, each with 100% of window width */
+  height: 100%; }
+
+.portfolio-Item {
+  height: 800px;
+  width: 16%;
+  /* relative to parent -> 25% of 400% = 100% of window width */
+  float: left;
+  background-color: green;
+  text-align: center; }
+
+.port-image {
+  display: inline-block;
+  margin: auto auto; }
 
 /*# sourceMappingURL=main.css.map */
