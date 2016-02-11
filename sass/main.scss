@@ -83,16 +83,43 @@ h3 {
 #slideContainer {
   width: 400%; /* to contain 4 panels, each with 100% of window width */
   height: 100%;
+  top: 50%;
+}
+
+#slideContainer li {
+  float: left;
+  margin-bottom: 0;
+  //margin-right: 200px;
+  position: relative;
+  background-color: #E6A400;
+  list-style: none;
+  width: 16%;
+  height: 450px;
+  text-align: center
+  //top: 50%;
+}
+
+#slideContainer li img {
+  bottom: 0;
+  //height: 100px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 95%;
 }
 
 .portfolio-Item {
-  height: 800px;
-  width: 16%; /* relative to parent -> 25% of 400% = 100% of window width */
-  float: left;
-  background-color: green;
-  text-align: center;
+  // //height: 800px;
+  // width: 16%; relative to parent -> 25% of 400% = 100% of window width
+  // //float: left;
+  // background-color: green;
+  // //text-align: center;
+  // list-style: none;
 }
-.port-image {
-  display: inline-block;
-  margin: auto auto;
-}
+// .port-image {
+//   display: inline-block;
+//   top: 50%;
+//   vertical-align: middle;
+// }
