@@ -5,12 +5,32 @@
 @font-face {
   font-family: titles;
   src: url(../lib/fonts/basictitlefont.ttf); }
+@font-face {
+  font-family: logoCursive;
+  src: url(../lib/fonts/Notera_PersonalUseOnly.ttf); }
+@font-face {
+  font-family: cabin;
+  src: url(../lib/fonts/Cabin-Regular.ttf); }
+@font-face {
+  font-family: shree;
+  src: url(../lib/fonts/ShreeDev0714.ttf); }
+@font-face {
+  font-family: asenine;
+  src: url(../lib/fonts/ASENINE_.ttf); }
 h3 {
   font-family: titles;
-  color: #F7484E;
+  color: #E74C3C;
   cursor: pointer;
   text-align: center;
   font-size: 175%; }
+
+p {
+  font-family: shree;
+  font-size: 1.3em; }
+
+h2 {
+  font-family: titles;
+  font-size: 5.5em; }
 
 #title-container {
   padding-top: 12%;
@@ -22,10 +42,52 @@ h3 {
   padding-left: 15%;
   padding-right: 10%; }
 
+#about-me {
+  font-family: logoCursive;
+  padding-top: 20px;
+  padding-left: 18%;
+  padding-right: 20px;
+  text-align: right;
+  color: white;
+  height: 840px;
+  overflow: hidden;
+  background-color: #E74C3C; }
+
+#about {
+  color: #292929; }
+
+#me {
+  color: #E74C3C; }
+
+#about-me-title {
+  padding-top: 20px;
+  padding-left: 20px;
+  text-align: left;
+  font-family: logoCursive;
+  overflow: hidden;
+  height: 840px; }
+
+#about-me-section > div > div > h1 {
+  font-size: 6em;
+  line-height: 0.8em; }
+
+#tech-list {
+  text-align: center;
+  font-family: logoCursive;
+  height: 420px; }
+
+#tech-title {
+  font-family: logoCursive;
+  padding-top: 65px;
+  text-align: center;
+  color: white;
+  height: 420px;
+  width: 50%;
+  background-color: #E74C3C; }
+
 #portfolio {
   height: 4200px;
-  padding: 20px;
-  background-color: #E6A400; }
+  padding: 20px; }
 
 #pinContainer {
   width: 100%;
@@ -44,9 +106,8 @@ h3 {
   float: left;
   margin-bottom: 0;
   position: relative;
-  background-color: #E6A400;
   list-style: none;
-  width: 16%;
+  width: 10%;
   height: 450px;
   text-align: center; }
 
@@ -58,5 +119,18 @@ h3 {
   top: 0;
   right: 0;
   width: 95%; }
+
+.home-popover {
+  text-decoration: none;
+  color: black;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  padding: 0 20px; }
+
+.home-popover span {
+  display: block;
+  font-weight: 700; }
 
 /*# sourceMappingURL=main.css.map */

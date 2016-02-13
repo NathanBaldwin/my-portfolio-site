@@ -1,19 +1,59 @@
+$accent-color: #E74C3C;
+
+//#FF312E; //good red
+$home-background: #292929;
+//#FF3029; not as good red
+
+//#8A8700; cool green
+//#2F8E83; aqua blue
+//#F7484E;
+
 #home {
-  background-color: #292929;
+  background-color: $home-background;
   height: 840px;
 }
 
 @font-face {
-    font-family: titles;
-    src: url(../lib/fonts/basictitlefont.ttf);
+  font-family: titles;
+  src: url(../lib/fonts/basictitlefont.ttf);
+}
+
+@font-face {
+  font-family: logoCursive;
+  src: url(../lib/fonts/Notera_PersonalUseOnly.ttf);
+}
+
+@font-face {
+  font-family: cabin;
+  src: url(../lib/fonts/Cabin-Regular.ttf);
+}
+
+@font-face {
+  font-family: shree;
+  src: url(../lib/fonts/ShreeDev0714.ttf);
+}
+
+@font-face {
+  font-family: asenine;
+  src: url(../lib/fonts/ASENINE_.ttf);
 }
 
 h3 {
     font-family: titles;
-    color: #F7484E;
+    color: $accent-color;
     cursor: pointer;
     text-align: center;
     font-size: 175%;
+}
+
+p {
+  font-family: shree;
+  font-size: 1.3em;
+}
+
+h2 {
+  font-family: titles;
+  font-size: 5.5em;
 }
 
 #title-container{
@@ -32,45 +72,71 @@ h3 {
   padding-left: 15%;
   padding-right: 10%;
 }
-
-#portfolio {
-  height: 4200px;
-  padding: 20px;
-  background-color: #E6A400;
+//********************* ABOUT ME ******************
+#about-me {
+  font-family: logoCursive;
+  padding-top: 20px;
+  padding-left: 18%;
+  padding-right: 20px;
+  text-align: right;
+  color: white;
+  height: 840px;
+  overflow: hidden;
+  //width: 50%;
+  //display: inline-block;
+  background-color: $accent-color;
+}
+#about {
+  color: $home-background;
+}
+#me {
+  color: $accent-color;
 }
 
-// body {
-//   overflow-x: hidden;
-// }
+#about-me-title {
+  padding-top: 20px;
+  padding-left: 20px;
+  text-align: left;
+  font-family: logoCursive;
+  overflow: hidden;
+  //display: inline-block;
+  height: 840px;
+  //background-color: green;
+  //width: 50%;
+}
 
-// .portfolio-list {
-//     height: 600px;
-//     max-height: 80%;
-//     padding: 0;
-//     width: 60000px;
-//     background-color: transparent;
-//     position: relative;
-//     top: 50%;
-//     -webkit-transform: translateY(-50%);
-//     -ms-transform: translateY(-50%);
-//     transform: translateY(-50%);
-//     //position: absolute;
-//     left: 0;
-//     padding-left: 20px;
+#about-me-section>div>div>h1 {
+  font-size: 6em;
+  line-height: 0.8em;
+  //color: #292929;
+}
 
-//     //margin-left: 500px;
-// }
+#tech-list{
+  text-align: center;
+  font-family: logoCursive;
+  //display: inline-block;
+  height: 420px;
+  //width: 50%;
+}
 
-// .portfolio-list li {
-//     float: left;
-//     margin-bottom: 0;
-//     margin-right: 200px;
-//     position: relative;
-//     top: 50%;
-//     // -webkit-transform: translateY(-50%);
-//     // -ms-transform: translateY(-50%);
-//     // transform: translateY(-50%);
-// }
+#tech-title{
+  font-family: logoCursive;
+  padding-top: 65px;
+  text-align: center;
+  color: white;
+  height: 420px;
+  width: 50%;
+  //display: inline-block;
+  background-color: $accent-color;
+}
+
+//******************** PORTFOLIO ******************
+#portfolio {
+  //display: inline-block;
+  height: 4200px;
+  padding: 20px;
+  //background-color: $home-background;
+}
 
 #pinContainer {
     width: 100%;
@@ -91,9 +157,9 @@ h3 {
   margin-bottom: 0;
   //margin-right: 200px;
   position: relative;
-  background-color: #E6A400;
+  //background-color: $home-background;
   list-style: none;
-  width: 16%;
+  width: 10%;
   height: 450px;
   text-align: center
   //top: 50%;
@@ -110,16 +176,17 @@ h3 {
   width: 95%;
 }
 
-.portfolio-Item {
-  // //height: 800px;
-  // width: 16%; relative to parent -> 25% of 400% = 100% of window width
-  // //float: left;
-  // background-color: green;
-  // //text-align: center;
-  // list-style: none;
+.home-popover {
+    text-decoration: none;
+    color: black;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: block;
+    padding: 0 20px;
 }
-// .port-image {
-//   display: inline-block;
-//   top: 50%;
-//   vertical-align: middle;
-// }
+
+.home-popover span {
+    display: block;
+    font-weight: 700;
+}
