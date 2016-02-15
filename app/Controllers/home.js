@@ -22,11 +22,17 @@ app.controller("home", ["$q", "$http", "$scope", "$firebaseArray", function($q, 
 
   $scope.scrollToPortfolio = function() {
     console.log("you clicked scrollToPortfolio!");
-    var portfolioSec = document.getElementById("portfolio");
+    var portfolioSec = document.getElementById("portfolio-scroll-anchor");
     var posTop = portfolioSec.offsetTop;
     console.log("posTop", posTop);
     // TweenLite.to(window, 2, {scrollTo:{y:400}, ease:Power2.easeOut});
     TweenLite.to(window, 1.2, {scrollTo:{y:posTop}, ease:Power3.easeOut});
   }
+
+  $scope.testClick = function() {
+    console.log("you clicked the link!");
+  }
+
+  
 
 }]);

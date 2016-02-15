@@ -134,16 +134,44 @@ h2 {
 #portfolio {
   //display: inline-block;
   height: 4200px;
-  padding: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px;
   //background-color: $home-background;
 }
 
-.fixed {
-  position: fixed;
-  top: 0;
-  left: 10%;
-  width: 80%
+.pos-absolute-center {
+  width: 80%;
+  //position: absolute;
+  //right: 0;
+  //left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
 }
+
+// .fixed {
+//   position: fixed;
+//   right: 0;
+//   left: 0;
+//   margin-left: auto;
+//   margin-right: auto;
+
+//   top: 0;
+//   width: 80%;
+//   cursor: pointer;
+//   z-index: 200;
+//   text-align: center;
+// }
+
+#portfolio-header {
+  cursor: pointer;
+}
+
+// .header-row {
+//   text-align: center;
+// }
+
 
 #pinContainer {
     width: 100%;
@@ -153,13 +181,13 @@ h2 {
             perspective: 1000;
   }
 
-#slideContainer {
+.port-container {
   width: 400%; /* to contain 4 panels, each with 100% of window width */
   height: 100%;
   top: 50%;
 }
 
-#slideContainer li {
+.port-container li {
   float: left;
   margin-bottom: 0;
   //margin-right: 200px;
@@ -172,7 +200,7 @@ h2 {
   //top: 50%;
 }
 
-#slideContainer li img {
+.port-container li img {
   bottom: 0;
   //height: 100px;
   left: 0;

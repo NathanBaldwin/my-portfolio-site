@@ -4,7 +4,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
   
   $stateProvider
 
-    .state('home', {
+  .state('home', {
     url: '/nbaldwin/home',
     views: {
       '': {
@@ -17,6 +17,20 @@ app.config(function($stateProvider, $urlRouterProvider) {
       } 
     }
   })
+  .state('home.photography', {
+    //url: '/nbaldwin/home/photography',
+    views: {
+      // '': {
+      //   templateUrl: 'Partials/home.html',
+      //   controller: 'home'
+      // },
+      '@home': {
+        templateUrl: 'Partials/photography-portfolio.html',
+        controller: 'photography-portfolio'
+      } 
+    }
+  })
+
 
 
   // if none of the above states are matched, use this as the fallback

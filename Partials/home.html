@@ -54,15 +54,21 @@
     </div>
   </div>
 </section>
-<section id="portfolio">
-  <div class="container-flex fix-it">
-    <div class="row">
-      <h3 class="col-sm-4">Web/Software Development</h3> 
-      <h3 class="col-sm-4">Photography</h3>
-      <h3 class="col-sm-4">Video</h3>
+<section id="portfolio-scroll-anchor">
+  <div id="portfolio">
+    <div class="container-flex fix-it pos-absolute-center" id="portfolio-header">
+      <div class="row">
+        <h3 class="col-sm-4">Web/Software Development</h3> 
+        <a ui-sref=".photography">
+          <h3 class="col-sm-4">Photography</h3>
+        </a> 
+        <h3 class="col-sm-4">Video</h3>
+      </div>
+    </div>
+    <div id="pinContainer" style="left:0px;">
+      <div ui-view></div>
     </div>
   </div>
-  <div ui-view id="pinContainer"></div>
 </section>
 
   <!-- div class="row">

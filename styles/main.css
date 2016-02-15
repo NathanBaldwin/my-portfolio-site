@@ -87,13 +87,18 @@ h2 {
 
 #portfolio {
   height: 4200px;
-  padding: 20px; }
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 20px; }
 
-.fixed {
-  position: fixed;
-  top: 0;
-  left: 10%;
-  width: 80%; }
+.pos-absolute-center {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+
+#portfolio-header {
+  cursor: pointer; }
 
 #pinContainer {
   width: 100%;
@@ -102,13 +107,13 @@ h2 {
   -webkit-perspective: 1000;
   perspective: 1000; }
 
-#slideContainer {
+.port-container {
   width: 400%;
   /* to contain 4 panels, each with 100% of window width */
   height: 100%;
   top: 50%; }
 
-#slideContainer li {
+.port-container li {
   float: left;
   margin-bottom: 0;
   position: relative;
@@ -117,7 +122,7 @@ h2 {
   height: 450px;
   text-align: center; }
 
-#slideContainer li img {
+.port-container li img {
   bottom: 0;
   left: 0;
   margin: auto;
