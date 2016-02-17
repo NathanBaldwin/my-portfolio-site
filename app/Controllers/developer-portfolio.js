@@ -1,5 +1,5 @@
-app.controller("developer-portfolio", ["$scope", "$routeParams", "$firebaseArray", 
-	function($scope, $routeParams, $firebaseArray) {
+app.controller("developer-portfolio", ["$scope", "$routeParams", "$firebaseArray", "$state", 
+	function($scope, $routeParams, $firebaseArray, $state) {
 
   $(function () { // wait for document ready
       // init
@@ -28,5 +28,15 @@ app.controller("developer-portfolio", ["$scope", "$routeParams", "$firebaseArray
         //.addIndicators() // add indicators (requires plugin)
         .addTo(scrollController);
     });
+
+  $scope.showCaption = () => {
+    console.log("you hovered over bubba");
+    $state.go('home.clocker');
+  }
+
+  $scope.hideCaption = () => {
+    console.log("you left!");
+    $state.go('home.noCaption');
+  }
 	
 }])

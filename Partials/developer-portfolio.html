@@ -2,13 +2,14 @@
 
 <ul id="slideContainer" class="port-container">
   <li class="portfolio-Item">
-  <figure class="effect-bubba port-image">
+  <figure class="effect-bubba port-image" ng-mouseover="showCaption()" ng-mouseleave="hideCaption()">
       <img src="./lib/images/IMG_0051.jpg"/>
       <figcaption>
         <h2>Clocker <span></span></h2>
         <a href="#">View more</a>
       </figcaption>     
     </figure>
+    <p id="clocker-caption">Bubba likes to appear out of thin air.</p>
 
     <!-- <img class="port-image" src="./lib/images/IMG_0051.jpg"> -->
   </li>
@@ -23,6 +24,5 @@
   </li>
 </ul>
 
-        <p id="clocker-caption">Bubba likes to appear out of thin air.</p>
 
   

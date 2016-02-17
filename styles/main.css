@@ -191,8 +191,9 @@ figure.effect-bubba:hover figcaption::after {
   transform: scale(1); }
 
 figure.effect-bubba:hover h2,
-figure.effect-bubba:hover p {
+figure.effect-bubba:hover + p {
   opacity: 1;
+  color: red;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
 

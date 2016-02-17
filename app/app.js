@@ -17,6 +17,20 @@ app.config(function($stateProvider, $urlRouterProvider) {
       } 
     }
   })
+  .state('home.clocker', {
+    views: {
+      'caption@home': {
+        template: "<p> testing caption here </p>"
+      }
+    }
+  })
+  .state('home.noCaption', {
+    views: {
+      'caption@home': {
+        template: ""
+      }
+    }
+  })
   .state('home.photography', {
     //url: '/nbaldwin/home/photography',
     views: {
