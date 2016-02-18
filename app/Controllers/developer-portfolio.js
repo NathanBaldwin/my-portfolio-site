@@ -1,4 +1,4 @@
-app.controller("developer-portfolio", ["$scope", "$routeParams", "$firebaseArray", "$state", 
+app.controller("developer-portfolio", ["$scope", "$routeParams", "$firebaseArray", "$state",
 	function($scope, $routeParams, $firebaseArray, $state) {
 
   $(function () { // wait for document ready
@@ -32,11 +32,20 @@ app.controller("developer-portfolio", ["$scope", "$routeParams", "$firebaseArray
   $scope.showCaption = () => {
     console.log("you hovered over bubba");
     $state.go('home.clocker');
+    //console.log("angular.element('.clocker-caption')", angular.element('.clocker-caption'));
+    //angular.element('.clocker-caption').addClass('fade-in')
+  }
+  
+  $scope.addClass = () => {
+    console.log("you clicked");
+    $scope.fadeIn = true;
+    $scope.$broadcast("fadeInChange", {fadeIn: $scope.fadeIn});
   }
 
   $scope.hideCaption = () => {
     console.log("you left!");
     $state.go('home.noCaption');
+    //angular.element('.caption').removeClass('ease-in')
   }
 	
 }])

@@ -1,4 +1,4 @@
-var app = angular.module("app", ['ui.router', 'ngRoute', 'firebase', 'angular.filter']);
+var app = angular.module("app", ['ui.router', 'ngRoute', 'firebase', 'angular.filter', 'ngAnimate']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
   
@@ -20,7 +20,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
   .state('home.clocker', {
     views: {
       'caption@home': {
-        template: "<p> testing caption here </p>"
+        templateUrl: "Partials/clockerCaption.html"
       }
     }
   })
