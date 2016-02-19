@@ -56,7 +56,7 @@
 </section>
 <section id="portfolio-scroll-anchor">
   <div id="portfolio">
-    <div class="container-flex fix-it pos-absolute-center" id="portfolio-header">
+    <div class="container-flex fix-it pos-center" id="portfolio-header">
       <div class="row">
         <h3 class="col-sm-4">Web/Software Development</h3> 
         <a ui-sref=".photography">
@@ -67,7 +67,11 @@
     </div>
     <div id="pinContainer" style="left:0px;">
       <div ui-view></div>
-      <div ui-view="caption" id="caption-view"></div>
+      <div class="row">
+        <div class="col-sm-12">
+          <div ui-view="caption" id="caption-view" class="pos-center"></div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
