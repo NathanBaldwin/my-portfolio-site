@@ -19,7 +19,7 @@
   src: url(../lib/fonts/ASENINE_.ttf); }
 h3 {
   font-family: titles;
-  color: #E74C3C;
+  color: #FF312E;
   cursor: pointer;
   text-align: center;
   font-size: 175%; }
@@ -51,13 +51,13 @@ h2 {
   color: white;
   height: 840px;
   overflow: hidden;
-  background-color: #E74C3C; }
+  background-color: #FF312E; }
 
 #about {
   color: #292929; }
 
 #me {
-  color: #E74C3C; }
+  color: #FF312E; }
 
 #about-me-title {
   padding-top: 20px;
@@ -83,13 +83,7 @@ h2 {
   color: white;
   height: 420px;
   width: 50%;
-  background-color: #E74C3C; }
-
-#portfolio {
-  height: 4200px;
-  padding-left: 20px;
-  padding-right: 20px;
-  padding-bottom: 20px; }
+  background-color: #FF312E; }
 
 .pos-center {
   width: 80%;
@@ -100,38 +94,30 @@ h2 {
 #portfolio-header {
   cursor: pointer; }
 
+#dev-portfolio-container {
+  width: 400%;
+  padding-left: 10px; }
+
 li.item-container {
+  width: 9%;
   border-radius: 5px;
-  float: left;
   position: relative;
   list-style: none;
-  width: 10%;
-  height: 50vh; }
+  display: inline-block;
+  margin-right: .3%; }
 
 li.item-container div.outer {
   width: 100%;
-  position: relative;
-  border: solid 1px green;
-  padding-top: 100%; }
+  border-radius: 5px;
+  padding-top: 75%; }
 
-li.container {
-  width: 50%;
-  border: solid 1px black;
-  background-color: blue;
-  position: relative; }
-
-li.container div.outer {
-  width: 100%;
-  position: relative;
-  border: solid 1px green;
-  padding-top: 100%; }
-
-li.container div.outer div.inner {
+li.item-container div.outer div.inner {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0; }
+  bottom: 0;
+  border-radius: 5px; }
 
 #pinContainer {
   width: 100%;
@@ -140,26 +126,15 @@ li.container div.outer div.inner {
   -webkit-perspective: 1000;
   perspective: 1000; }
 
-.port-container {
-  width: 400%;
-  /* to contain 4 panels, each with 100% of window width */
-  height: 100%;
-  top: 50%; }
-
-.port-container li img {
-  bottom: 0;
-  left: 0;
-  margin: auto;
-  position: absolute;
-  top: 0;
-  right: 0;
-  width: 95%; }
-
-.clocker {
+#clocker {
   background-color: #5B8623; }
 
+#clocker-links {
+  color: black; }
+
 #clocker-title {
-  width: 65%; }
+  width: 66%;
+  margin-left: 17%; }
 
 /*---------------*/
 /***** Bubba *****/
@@ -191,19 +166,46 @@ li.effect-bubba figcaption::after {
   transform: scale(1, 0);
   opacity: 0; }
 
-li.effect-bubba h3, li.effect-bubba div, li.effect-bubba img {
+li.effect-bubba h3, li.effect-bubba div.clock, li.effect-bubba img {
   -webkit-transition: -webkit-transform 0.35s;
   transition: transform 0.35s;
   -webkit-transform: translate3d(0, -10px, 0);
   transform: translate3d(0, -10px, 0); }
 
 li.effect-bubba p {
-  padding: 20px 2.5em;
   opacity: 0;
+  padding-left: 19%;
+  padding-right: 19%;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
   -webkit-transform: translate3d(0, 20px, 0);
   transform: translate3d(0, 20px, 0); }
+
+li.effect-bubba a img.github-img {
+  opacity: 0;
+  position: absolute;
+  z-index: 1000;
+  left: 40%;
+  bottom: 26%;
+  width: 20%;
+  cursor: pointer;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(0, 20px, 0);
+  transform: translate3d(0, 20px, 0); }
+
+li.effect-bubba a img.website-link-img {
+  opacity: 0;
+  position: absolute;
+  z-index: 1000;
+  top: 27%;
+  right: 15%;
+  width: 60%;
+  cursor: pointer;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+  transition: opacity 0.35s, transform 0.35s;
+  -webkit-transform: translate3d(0, -20px, 0);
+  transform: translate3d(0, -20px, 0); }
 
 li.effect-bubba:hover figcaption::before,
 li.effect-bubba:hover figcaption::after {
@@ -211,12 +213,24 @@ li.effect-bubba:hover figcaption::after {
   -webkit-transform: scale(1);
   transform: scale(1); }
 
-li.effect-bubba:hover h3,
-li.effect-bubba:hover div,
-li.effect-bubba:hover img,
-li.effect-bubba:hover + p {
+li.effect-bubba:hover #clocker {
+  opacity: 0.5; }
+
+li.effect-bubba:hover div a img.github-img {
   opacity: 1;
-  color: red;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+li.effect-bubba:hover div a img.website-link-img {
+  opacity: 1;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0); }
+
+li.effect-bubba:hover h3,
+li.effect-bubba:hover div.clock,
+li.effect-bubba:hover figcaption img,
+li.effect-bubba:hover p {
+  opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
 
@@ -229,6 +243,9 @@ li.effect-bubba:hover + p {
   /* Chrome */
   transition: 1s linear all; }
 
+.view-margin {
+  margin-top: 25px; }
+
 #caption-view {
   height: 100px; }
 
@@ -236,22 +253,19 @@ li.effect-bubba:hover + p {
   position: absolute;
   left: 0;
   right: 0;
-  -webkit-transition: all 0.35s ease-in-out;
-  -moz-transition: all 0.35s ease-in-out;
-  -o-transition: all 0.35s ease-in-out;
-  transition: all 0.35s ease-in-out; }
+  -webkit-transition: all .35s ease-in-out;
+  -moz-transition: all .35s ease-in-out;
+  -o-transition: all .35s ease-in-out;
+  transition: all .35s ease-in-out; }
 
 [ui-view="caption"].ng-enter {
   opacity: 0;
-  -webkit-transform: translate3d(0, 0, -20px);
-  -moz-transform: translate3d(0, 0, -20px);
-  transform: translate3d(0, 0, -20px); }
+  -webkit-transform: translate3d(0, 20px, 0);
+  -moz-transform: translate3d(0, 20px, 0);
+  transform: translate3d(0, 20px, 0); }
 
 [ui-view="caption"].ng-enter-active {
   opacity: 1;
-  -webkit-transform: scale3d(1, 1, 1);
-  -moz-transform: scale3d(1, 1, 1);
-  transform: scale3d(1, 1, 1);
   -webkit-transform: translate3d(0, 0, 0);
   -moz-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
@@ -264,9 +278,9 @@ li.effect-bubba:hover + p {
 
 [ui-view="caption"].ng-leave-active {
   opacity: 0;
-  -webkit-transform: translate3d(0, 0, -20px);
-  -moz-transform: translate3d(0, 0, -20px);
-  transform: translate3d(0, 0, -20px); }
+  -webkit-transform: translate3d(0, 20px, 0);
+  -moz-transform: translate3d(0, 20px, 0);
+  transform: translate3d(0, 20px, 0); }
 
 * {
   margin: 0;
@@ -276,20 +290,21 @@ li.effect-bubba:hover + p {
   box-sizing: border-box; }
 
 .wrap {
-  width: 145px;
-  height: 145px; }
+  width: 100px;
+  height: 100px; }
 
 .center {
   margin: auto;
-  top: 0;
+  position: relative;
+  top: 20;
   left: 0;
   bottom: 0;
   right: 0;
-  margin-top: 70px; }
+  margin-top: 14%; }
 
 .timer {
-  width: 70%;
-  height: 70%;
+  width: 100%;
+  height: 100%;
   background-color: transparent;
   border: 6px solid #fff;
   border-radius: 50%;

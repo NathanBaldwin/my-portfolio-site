@@ -9,11 +9,11 @@ app.controller("developer-portfolio", ["$scope", "$routeParams", "$firebaseArray
       // define movement of panels
       var wipeAnimation = new TimelineMax()
         // animate to second panel
-        .to("#slideContainer", 1,   {x: "-25%"})  // move in to first panel
+        .to("#dev-portfolio-container", 1,   {x: "-25%"})  // move in to first panel
         // animate to third panel
-        .to("#slideContainer", 1,   {x: "-50%"})
+        .to("#dev-portfolio-container", 1,   {x: "-50%"})
         // animate to forth panel
-        .to("#slideContainer", 1,   {x: "-75%"})
+        .to("#dev-portfolio-container", 1,   {x: "-75%"})
 
       new ScrollMagic.Scene({
           triggerElement: "#portfolio",
@@ -36,11 +36,11 @@ app.controller("developer-portfolio", ["$scope", "$routeParams", "$firebaseArray
     //angular.element('.clocker-caption').addClass('fade-in')
   }
   
-  $scope.addClass = () => {
-    console.log("you clicked");
-    $scope.fadeIn = true;
-    $scope.$broadcast("fadeInChange", {fadeIn: $scope.fadeIn});
-  }
+  // $scope.addClass = () => {
+  //   console.log("you clicked");
+  //   $scope.fadeIn = true;
+  //   $scope.$broadcast("fadeInChange", {fadeIn: $scope.fadeIn});
+  // }
 
   $scope.hideCaption = () => {
     console.log("you left!");

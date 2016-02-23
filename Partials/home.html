@@ -65,14 +65,16 @@
         <h3 class="col-sm-4">Video</h3>
       </div>
     </div>
-    <div id="pinContainer" style="left:0px;">
+    <div id="pinContainer">
       <div ui-view></div>
-      <div class="row">
-        <div class="col-sm-12">
-          <div ui-view="caption" id="caption-view" class="pos-center"></div>
-        </div>
-      </div>
+      <!-- <div class="row"> -->
+        <!-- <div class="col-sm-12"> -->
+        <!-- </div> -->
+      <!-- </div> -->
     </div>
+      <div ui-view="caption" class="pos-center view-margin" id="caption-view"></div>
+    <!-- <div class='ui-view-containter'> -->
+    <!-- </div> -->
   </div>
 </section>
 
