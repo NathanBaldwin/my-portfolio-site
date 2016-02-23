@@ -54,36 +54,85 @@
     </div>
   </div>
 </section>
+
 <section id="portfolio-scroll-anchor">
   <div id="portfolio">
-    <div class="container-flex fix-it pos-center" id="portfolio-header">
-      <div class="row">
-        <h3 class="col-sm-4">Web/Software Development</h3> 
-        <a ui-sref=".photography">
-          <h3 class="col-sm-4">Photography</h3>
-        </a> 
-        <h3 class="col-sm-4">Video</h3>
+    <div id='header-wrapper'>
+      <div class="container-flex fix-it pos-center" id="portfolio-header">
+        <div class="row">
+          <h3 class="col-sm-4">Web/Software Development</h3> 
+          <a ui-sref=".photography">
+            <h3 class="col-sm-4">Photography</h3>
+          </a> 
+          <h3 class="col-sm-4">Video</h3>
+        </div>
       </div>
     </div>
     <div id="pinContainer">
       <div ui-view></div>
-      <!-- <div class="row"> -->
-        <!-- <div class="col-sm-12"> -->
-        <!-- </div> -->
-      <!-- </div> -->
     </div>
-      <div ui-view="caption" class="pos-center view-margin" id="caption-view"></div>
-    <!-- <div class='ui-view-containter'> -->
-    <!-- </div> -->
+    <div  id="caption-view">
+      <div ui-view="caption" class="pos-center view-margin"></div>
+    </div>
+    <section id="technologies">
+      <div class="container-flex">
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="row">
+              <h2>TECHNOLOGIES:</h2>
+            </div>
+            <div class="row">
+              <div class="col-sm-4">
+                <img class='tech-logo' src="./lib/images/technologies/javascript-original.svg">
+              </div>
+              <div class="col-sm-4">
+                <img class='tech-logo' src="./lib/images/technologies/mongodb-original.svg">
+              </div>
+              <div class="col-sm-4">
+                <img class='tech-logo' src="./lib/images/technologies/css3-original.svg">
+              </div>        
+             </div>
+          </div>
+          <!-- <div class="col-sm-2">
+            <img class='tech-logo' src="./lib/images/technologies/javascript-original.svg">
+          </div>
+          <div class="col-sm-2">
+            <img class='tech-logo' src="./lib/images/technologies/mongodb-original.svg">
+          </div>
+          <div class="col-sm-2">
+            <img class='tech-logo' src="./lib/images/technologies/css3-original.svg">
+          </div>
+          <div class="col-sm-6"> -->
+          <!-- </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-2">
+            <img class='tech-logo' src="./lib/images/technologies/bootstrap-plain.svg">
+          </div>
+          <div class="col-sm-2">
+            <img class='tech-logo' src="./lib/images/technologies/nodejs-plain-wordmark.svg">
+          </div>
+          <div class="col-sm-2">
+            <img class='tech-logo' src="./lib/images/technologies/html5-original.svg">
+          </div>
+          <div class="col-sm-2">
+            <img class='tech-logo' src="./lib/images/technologies/sass-original.svg">
+          </div>
+          <div class="col-sm-2">
+            <img class='tech-logo' src="./lib/images/technologies/angularjs-original.svg">
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-2">
+            <img class='tech-logo' src="./lib/images/technologies/grunt-line.svg">
+          </div>
+          <div class="col-sm-2">
+            <img class='tech-logo' src="./lib/images/technologies/photoshop-plain.svg">
+          </div> -->
+        </div>
+      </div>
+    </section>
   </div>
 </section>
 
-  <!-- div class="row">
-    <div class="col-sm-6" id="tech-list">
-    </div>
-    <div class="col-sm-6" id="tech-title">
-      <h1>Technologies</h1>
-      <h1>Used</h1>
-    </div>
-  </div> -->
 
