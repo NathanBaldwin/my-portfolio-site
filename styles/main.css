@@ -17,6 +17,9 @@
 @font-face {
   font-family: asenine;
   src: url(../lib/fonts/ASENINE_.ttf); }
+@font-face {
+  font-family: adobeFans;
+  src: url(../lib/fonts/AdobeFanHeitiStd-Bold.otf); }
 h3 {
   font-family: titles;
   color: #FF312E;
@@ -31,6 +34,13 @@ p {
 h2 {
   font-family: titles;
   font-size: 5.5em; }
+
+.portfolio-title {
+  margin-top: 0;
+  padding-top: 30px;
+  font-family: titles;
+  text-align: center;
+  font-weight: 900; }
 
 #title-container {
   padding-top: 12%;
@@ -86,7 +96,6 @@ h2 {
   background-color: #FF312E; }
 
 #portfolio {
-  padding-top: 12%;
   background-color: #F7F7F7; }
 
 #header-wrapper {
@@ -108,16 +117,16 @@ h2 {
   cursor: pointer; }
 
 #dev-portfolio-container {
-  width: 400%;
+  width: 150%;
   padding-left: 10px; }
 
 li.item-container {
-  width: 9%;
+  width: 24%;
   border-radius: 5px;
   position: relative;
   list-style: none;
   display: inline-block;
-  margin-right: .3%; }
+  margin-right: 5px; }
 
 li.item-container div.outer {
   width: 100%;
@@ -133,6 +142,8 @@ li.item-container div.outer div.inner {
   border-radius: 5px; }
 
 #pinContainer {
+  border-bottom: solid 1px #999;
+  padding-bottom: 6px;
   padding-top: 10px;
   padding-bottom: 5px;
   width: 100%;
@@ -140,6 +151,21 @@ li.item-container div.outer div.inner {
   overflow: hidden;
   -webkit-perspective: 1000;
   perspective: 1000; }
+
+.port-container {
+  width: 400%;
+  /* to contain 4 panels, each with 100% of window width */
+  height: 100%;
+  top: 50%; }
+
+.port-container li img {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 95%; }
 
 #clocker {
   background-color: #5B8623;
@@ -151,6 +177,54 @@ li.item-container div.outer div.inner {
 #clocker-title {
   width: 66%;
   margin-left: 17%; }
+
+#next-item {
+  background-color: yellow;
+  font-family: Helvetica;
+  font-weight: 100; }
+
+#third-item {
+  background-color: blue;
+  font-family: Helvetica;
+  font-weight: 100; }
+
+#fourth-item {
+  background-color: orange;
+  font-family: Helvetica;
+  font-weight: 100; }
+
+li.photo-item-container {
+  width: 12.5%;
+  border-radius: 5px;
+  position: relative;
+  list-style: none;
+  display: inline-block;
+  margin-right: 5px; }
+
+#photography-portfolio-container {
+  width: 400%;
+  /* to contain 4 panels, each with 100% of window width */
+  height: 100%; }
+
+#photography-portfolio-container li div div img {
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  top: 0;
+  right: 0;
+  width: 95%; }
+
+.portfolio-Item {
+  height: 800px;
+  width: 16%;
+  /* relative to parent -> 25% of 400% = 100% of window width */
+  float: left;
+  background-color: green;
+  text-align: center; }
+
+.port-image {
+  display: inline-block;
+  margin: auto auto; }
 
 /*---------------*/
 /***** Bubba *****/
@@ -229,7 +303,7 @@ li.effect-bubba:hover figcaption::after {
   -webkit-transform: scale(1);
   transform: scale(1); }
 
-li.effect-bubba:hover #clocker {
+li.effect-bubba:hover div.outer div.inner {
   opacity: 0.5; }
 
 li.effect-bubba:hover div a img.github-img {
@@ -266,8 +340,8 @@ li.effect-bubba:hover p {
   right: 0; }
 
 #caption-view {
-  height: 32vh;
-  border-top: solid 1px #999; }
+  height: 33vh;
+  margin-top: 25px; }
 
 [ui-view="caption"].ng-enter, [ui-view="caption"].ng-leave {
   position: absolute;

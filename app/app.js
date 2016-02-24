@@ -17,7 +17,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
       } 
     }
   })
-  .state('home.clocker', {
+  .state('home.software', {
     views: {
       'caption@home': {
         templateUrl: "Partials/clockerCaption.html"
@@ -32,12 +32,7 @@ app.config(function($stateProvider, $urlRouterProvider) {
     }
   })
   .state('home.photography', {
-    //url: '/nbaldwin/home/photography',
     views: {
-      // '': {
-      //   templateUrl: 'Partials/home.html',
-      //   controller: 'home'
-      // },
       '@home': {
         templateUrl: 'Partials/photography-portfolio.html',
         controller: 'photography-portfolio'

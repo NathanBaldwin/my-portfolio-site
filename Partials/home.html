@@ -57,11 +57,14 @@
 
 <section id="portfolio-scroll-anchor">
   <div id="portfolio">
+    <h2 class='portfolio-title'>PORTFOLIO</h2>
     <div id='header-wrapper'>
       <div class="container-flex fix-it pos-center" id="portfolio-header">
         <div class="row">
-          <h3 class="col-sm-4">Web/Software Development</h3> 
-          <a ui-sref=".photography">
+          <a ng-click="softwareView()">
+            <h3 class="col-sm-4">Web/Software Development</h3> 
+          </a>
+          <a ng-click="photographyView()">
             <h3 class="col-sm-4">Photography</h3>
           </a> 
           <h3 class="col-sm-4">Video</h3>

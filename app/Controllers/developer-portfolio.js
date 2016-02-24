@@ -8,44 +8,34 @@ app.controller("developer-portfolio", ["$scope", "$routeParams", "$firebaseArray
 
       // define movement of panels
       var wipeAnimation = new TimelineMax()
-        // animate to second panel
-        .to("#dev-portfolio-container", 1,   {x: "-25%"})  // move in to first panel
+        // animate scroll left:
+        .to("#dev-portfolio-container", 1,   {x: "-32%"})  // move in to first panel
+        
+
         // animate to third panel
-        .to("#dev-portfolio-container", 1,   {x: "-50%"})
+        // .to("#dev-portfolio-container", 1,   {x: "-50%"})
         // animate to forth panel
-        .to("#dev-portfolio-container", 1,   {x: "-75%"})
+        // .to("#dev-portfolio-container", 1,   {x: "-75%"})
 
       new ScrollMagic.Scene({
           triggerElement: "#portfolio",
           triggerHook: "onLeave",
-          duration: "500%"
+          duration: "100%"
         })
         .setPin("#portfolio")
-        //.setPin("#pinContainer")
-        //.setClassToggle("#portfolio-header", "fixed") 
         .setTween(wipeAnimation)
-        //.setPin("#portfolio-header")
-        //.addIndicators() // add indicators (requires plugin)
         .addTo(scrollController);
     });
 
   $scope.showCaption = () => {
     console.log("you hovered over bubba");
-    $state.go('home.clocker');
-    //console.log("angular.element('.clocker-caption')", angular.element('.clocker-caption'));
-    //angular.element('.clocker-caption').addClass('fade-in')
+    $state.go('home.software');
   }
-  
-  // $scope.addClass = () => {
-  //   console.log("you clicked");
-  //   $scope.fadeIn = true;
-  //   $scope.$broadcast("fadeInChange", {fadeIn: $scope.fadeIn});
-  // }
+
 
   $scope.hideCaption = () => {
     console.log("you left!");
     $state.go('home.noCaption');
-    //angular.element('.caption').removeClass('ease-in')
   }
 	
 }])

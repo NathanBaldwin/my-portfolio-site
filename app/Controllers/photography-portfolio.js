@@ -17,7 +17,7 @@ app.controller("photography-portfolio", ["$scope", "$routeParams", "$firebaseArr
 
       var triggerElement = document.getElementById("portfolio");
       console.log("triggerElement", triggerElement);
-      var gsapTarget = document.getElementById("slideContainer-photography");
+      var gsapTarget = document.getElementById("photography-portfolio-container");
       console.log("gsap target", gsapTarget);
 
       var pinContainer = document.getElementById("pinContainer");
@@ -27,16 +27,16 @@ app.controller("photography-portfolio", ["$scope", "$routeParams", "$firebaseArr
       // define movement of panels
       var wipeAnimation = new TimelineMax()
         // animate to second panel
-        .to("#slideContainer-photography", 1,   {x: "-25%"})  // move in to first panel
+        .to("#photography-portfolio-container", 1,   {x: "-75%"})  // move in to first panel
         // animate to third panel
-        .to("#slideContainer-photography", 1,   {x: "-50%"})
+        // .to("#slideContainer-photography", 1,   {x: "-50%"})
         // animate to forth panel
-        .to("#slideContainer-photography", 1,   {x: "-75%"})
+        // .to("#slideContainer-photography", 1,   {x: "-75%"})
 
       new ScrollMagic.Scene({
-          triggerElement: triggerElement,
+          triggerElement: "#portfolio",
           triggerHook: "onLeave",
-          duration: "500%"
+          duration: "100%"
         })
         .setPin("#portfolio")
 

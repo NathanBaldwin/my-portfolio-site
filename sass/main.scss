@@ -38,6 +38,11 @@ $home-background: #292929;
   src: url(../lib/fonts/ASENINE_.ttf);
 }
 
+@font-face {
+  font-family: adobeFans;
+  src: url(../lib/fonts/AdobeFanHeitiStd-Bold.otf);
+}
+
 h3 {
     font-family: titles;
     color: $accent-color;
@@ -59,6 +64,20 @@ h2 {
 // .link-title {
 //   font-family: asenine;
 // }
+
+.portfolio-title {
+  margin-top: 0;
+  padding-top: 30px;
+  // font-family: Helvetica;
+  // font-family: shree;
+  font-family: titles;
+  text-align: center;
+  font-weight: 900;
+  // font-size: 9em;
+  // font-family: adobeFans;
+  // width: 20%;
+  // margin: 0 auto;
+}
 
 #title-container{
   padding-top: 12%;
@@ -136,7 +155,7 @@ h2 {
 
 //******************** PORTFOLIO ******************
 #portfolio {
-  padding-top: 12%;
+  // padding-top: 12%;
   background-color: #F7F7F7;
 }
 
@@ -165,18 +184,18 @@ h2 {
 
 #dev-portfolio-container {
   //border: solid 1px $home-background;
-  width: 400%;
+  width: 150%;
   padding-left: 10px;
 }
 
 li.item-container {
-  width: 9%;
+  width: 24%;
   //border: solid 1px black;
   border-radius: 5px;
   position: relative;
   list-style: none;
   display: inline-block;
-  margin-right: .3%;
+  margin-right: 5px;
 }
 
 li.item-container div.outer {
@@ -200,6 +219,8 @@ li.item-container div.outer div.inner {
 
 
 #pinContainer {
+  border-bottom: solid 1px #999;
+    padding-bottom: 6px;
     padding-top: 10px;
     padding-bottom: 5px;
     // background-color: $home-background;
@@ -210,22 +231,24 @@ li.item-container div.outer div.inner {
             perspective: 1000;
   }
 
-// .port-container {
-//   width: 400%; /* to contain 4 panels, each with 100% of window width */
-//   height: 100%;
-//   top: 50%;
-// }
+.port-container {
+  width: 400%; /* to contain 4 panels, each with 100% of window width */
+  height: 100%;
+  top: 50%;
+}
 
-// .port-container li img {
-//   bottom: 0;
-//   //height: 100px;
-//   left: 0;
-//   margin: auto;
-//   position: absolute;
-//   top: 0;
-//   right: 0;
-//   width: 95%;
-// }
+.port-container li img {
+  bottom: 0;
+  //height: 100px;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 95%;
+}
+
+
 
 //#### CLOCKER:
 
@@ -244,25 +267,75 @@ li.item-container div.outer div.inner {
   margin-left: 17%;
 }
 
+//#### NEXT PROJECT:
+
+#next-item {
+  background-color: yellow;
+  font-family: Helvetica;
+  font-weight: 100;
+}
+
+// #### THRID PROJECT:
+#third-item {
+  background-color: blue;
+  font-family: Helvetica;
+  font-weight: 100;
+}
+
+// ### FOURTH PROJECT:
+
+#fourth-item {
+  background-color: orange;
+  font-family: Helvetica;
+  font-weight: 100;
+}
+
+// ######### Photography Portfolio
+
+li.photo-item-container {
+  width: 12.5%;
+  //border: solid 1px black;
+  border-radius: 5px;
+  position: relative;
+  list-style: none;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+
+#photography-portfolio-container {
+  width: 400%; /* to contain 4 panels, each with 100% of window width */
+  height: 100%;
+}
+
+#photography-portfolio-container li div div img {
+  bottom: 0;
+  //height: 100px;
+  left: 0;
+  margin: auto;
+  // position: absolute;
+  top: 0;
+  right: 0;
+  width: 95%;
+}
+
+.portfolio-Item {
+  height: 800px;
+  width: 16%; /* relative to parent -> 25% of 400% = 100% of window width */
+  float: left;
+  background-color: green;
+  text-align: center;
+}
+.port-image {
+  display: inline-block;
+  margin: auto auto;
+}
+
+
 /*---------------*/
 /***** Bubba *****/
 /*---------------*/
 
-// div.effect-bubba {
-//   background: #9e5406;
-// }
-
-// li.effect-bubba img {
-//   opacity: 0.7;
-//   -webkit-transition: opacity 0.35s;
-//   transition: opacity 0.35s;
-// }
-// li.effect-bubba img {
-//   opacity: 0.6;
-// }
-// li.effect-bubba:hover img {
-//   opacity: 1;
-// }
 
 li.effect-bubba figcaption::before,
 li.effect-bubba figcaption::after {
@@ -349,7 +422,7 @@ li.effect-bubba:hover figcaption::after {
   transform: scale(1);
 }
 
-li.effect-bubba:hover #clocker {
+li.effect-bubba:hover div.outer div.inner {
   opacity: 0.5;
 }
 li.effect-bubba:hover div a img.github-img {
@@ -392,8 +465,9 @@ li.effect-bubba:hover p {
 }
 
 #caption-view {
-  height: 32vh;
-  border-top: solid 1px #999;
+  height: 33vh;
+  margin-top: 25px;
+  // border-top: solid 1px #999;
 }
 [ui-view="caption"].ng-enter, [ui-view="caption"].ng-leave {
   position: absolute;
