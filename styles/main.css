@@ -35,8 +35,8 @@ h2 {
   font-family: titles;
   font-size: 5.5em; }
 
-.hidden {
-  display: none; }
+#clear-nav {
+  opacity: 0; }
 
 .navbar-custom {
   background-color: transparent;

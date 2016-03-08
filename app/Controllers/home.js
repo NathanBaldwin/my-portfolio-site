@@ -112,6 +112,22 @@ $( document ).ready(function() {
     setTimeout(function () {
       $state.go('home.software');
     }, 55);
-  } 
+  }
+
+  //fade in nav options at about me section:
+  var fadeInController = new ScrollMagic.Controller();
+  
+  var fadeInNav = new TimelineMax()
+  .to('#clear-nav', 1.5,{ opacity: 1 });
+  // var fadeout_tween = TweenMax.to('#clear-nav', .375,{ opacity: 0 });
+
+
+  var fadein_scene = new ScrollMagic.Scene({
+    triggerElement: '#about-me-section',
+    reverse: true
+  })
+  .setTween(fadeInNav)
+  .addTo(fadeInController);
+
 });
 }]);
