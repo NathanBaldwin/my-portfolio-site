@@ -1,8 +1,8 @@
-app.controller("clocker-caption", ["$scope", "$routeParams", "$firebaseArray", 
-  function($scope, $routeParams, $firebaseArray) {
+app.controller("clocker-caption", ["$scope", "$routeParams", 
+  function($scope, $routeParams) {
     console.log("clocker-caption controller loaded");
 
-    $scope.$on("fadeInChange", (event, args) => {
+    $scope.$on("fadeInChange", function (event, args) {
       console.log("event", event);
       console.log("args:", args);
     });

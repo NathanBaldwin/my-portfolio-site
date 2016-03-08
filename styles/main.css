@@ -35,6 +35,18 @@ h2 {
   font-family: titles;
   font-size: 5.5em; }
 
+.hidden {
+  display: none; }
+
+.navbar-custom {
+  background-color: transparent;
+  border-color: transparent; }
+
+div.site-nav ul.nav li.nav-option a {
+  font-family: logoCursive;
+  font-weight: bold;
+  font-size: 1.6em; }
+
 .portfolio-title {
   margin-top: 0;
   padding-top: 30px;
@@ -73,6 +85,31 @@ h2 {
   padding-right: 10%;
   height: 100px; }
 
+#headshot {
+  position: absolute;
+  margin-left: -55px;
+  margin-top: 500px;
+  margin-bottom: 4px; }
+
+#hidden-filler-div {
+  float: right;
+  clear: both;
+  width: 37px;
+  height: 88px;
+  margin-left: 8px; }
+
+.hidden-filler:before {
+  content: "";
+  display: block;
+  float: right;
+  height: 500px; }
+
+#headshot-hidden {
+  position: absolute;
+  margin-right: -55px;
+  margin-top: 500px;
+  margin-bottom: 4px; }
+
 #about-me {
   font-family: logoCursive;
   padding-top: 20px;
@@ -86,6 +123,10 @@ h2 {
 
 #about {
   color: #292929; }
+
+.spacer {
+  margin-bottom: 15px;
+  margin-top: 15px; }
 
 #me {
   color: #E74C3C; }
@@ -501,7 +542,6 @@ li.effect-bubba:hover p {
   display: inline-block;
   position: relative;
   text-align: center;
-  border: solid 1px #ddd;
   padding-left: 2px;
   padding-right: 2px;
   border-radius: 5px;

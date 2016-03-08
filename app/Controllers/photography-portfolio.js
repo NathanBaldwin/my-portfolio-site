@@ -1,5 +1,5 @@
-app.controller("photography-portfolio", ["$scope", "$routeParams", "$firebaseArray", 
-	function($scope, $routeParams, $firebaseArray) {
+app.controller("photography-portfolio", ["$scope", "$routeParams", 
+	function($scope, $routeParams) {
     console.log("photography-portfolio");
 
     // $scope.scrollToPortfolio = function() {

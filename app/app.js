@@ -1,4 +1,4 @@
-var app = angular.module("app", ['ui.router', 'ngRoute', 'firebase', 'angular.filter', 'ngAnimate']);
+var app = angular.module("app", ['ui.router', 'ngRoute', 'ngAnimate']);
 
 app.config(function($stateProvider, $urlRouterProvider) {
   

@@ -66,6 +66,23 @@ h2 {
 //   font-family: asenine;
 // }
 
+// ###### NAV #######
+.hidden {
+  display: none;
+}
+
+.navbar-custom {
+    background-color: transparent;
+    border-color: transparent;
+}
+
+div.site-nav ul.nav li.nav-option a{
+  font-family: logoCursive;
+  // color: black;
+  font-weight: bold;
+  font-size: 1.6em;
+}
+
 .portfolio-title {
   margin-top: 0;
   padding-top: 30px;
@@ -126,7 +143,37 @@ h2 {
   height: 100px;
 }
 //********************* ABOUT ME ******************
+#headshot {
+  position: absolute;
+  margin-left: -55px;
+  margin-top: 500px;
+  margin-bottom: 4px;
+}
+#hidden-filler-div {
+  float:right;  
+  clear:both;
+  width: 37px;
+  // border-top-left-radius: 60%;
+  // border-bottom-left-radius: 60%;
+  height: 88px;
+  // background-color: black;
+  margin-left: 8px;
+}
+.hidden-filler:before {
+  content: '' ;
+  // border-top-left-radius: 60%;
+  // border-bottom-left-radius: 60%;
+  display:block;
+  float: right;
+  height: 500px;
+}
 
+#headshot-hidden {
+  position: absolute;
+  margin-right: -55px;
+  margin-top: 500px;
+  margin-bottom: 4px;
+}
 #about-me {
   font-family: logoCursive;
   padding-top: 20px;
@@ -142,6 +189,11 @@ h2 {
 }
 #about {
   color: $home-background;
+}
+
+.spacer {
+  margin-bottom: 15px;
+  margin-top: 15px;
 }
 #me {
   color: $accent-color;
@@ -658,7 +710,7 @@ li.effect-bubba:hover p {
   display: inline-block;
   position: relative;
   text-align: center;
-  border: solid 1px #ddd;
+  // border: solid 1px #ddd;
   padding-left: 2px;
   padding-right: 2px;
   border-radius: 5px;

@@ -1,4 +1,4 @@
-app.controller("home", ["$q", "$http", "$scope", "$firebaseArray", "$state", function($q, $http, $scope, $firebaseArray, $state) {
+app.controller("home", ["$q", "$http", "$scope", "$state", function($q, $http, $scope, $state) {
 
 //home page popopver on hover of homepage graphic:
 
@@ -11,13 +11,13 @@ $( document ).ready(function() {
   $scope.timer = "";
   $scope.appState ="";
       
-  $scope.showNav = () => {
+  $scope.showNav = function () {
     if ($scope.timer === "complete") {
       $scope.appState='nav';
     }
   }
 
-  $scope.showSubTitles = () => {
+  $scope.showSubTitles = function () {
     if ($scope.timer === "complete") {
       $scope.appState = 'subtitles';
     }
@@ -34,7 +34,7 @@ $( document ).ready(function() {
   tl.to(backSplash, 3, {strokeDashoffset: 0})
   .to(signature, 2.5, {strokeDashoffset: 0, delay: 0.0, ease: SlowMo.ease.config(0.3, 0.4, false)})
   // .from('.sub-ttl', 1.7, {opacity:0, delay: 0.3, ease: Power1.easeOut})
-  .add(()=> {
+  .add(function () {
     console.log("animation complete");
     //wait for initial animation to complete before enabling subtitle hover:
     $scope.timer = 'complete';
@@ -52,7 +52,7 @@ $( document ).ready(function() {
     TweenLite.to(window, scrollTime, {scrollTo:{y:posTop}, ease:Power3.easeOut});
   }
 
-  $scope.scrollToAbout = (time) => {
+  $scope.scrollToAbout = function (time) {
     var scrollTime = time || 0.9;
     console.log("you clicked scrollToPortfolio!");
     var portfolioSec = document.getElementById("about-me-section");
@@ -61,7 +61,7 @@ $( document ).ready(function() {
     // TweenLite.to(window, 2, {scrollTo:{y:400}, ease:Power2.easeOut});
     TweenLite.to(window, scrollTime, {scrollTo:{y:posTop}, ease:Power3.easeOut});
   }
-  $scope.scrollToContact = (time) => {
+  $scope.scrollToContact = function (time) {
     var scrollTime = time || 1.5;
     console.log("you clicked scrollToPortfolio!");
     var portfolioSec = document.getElementById("contact");
@@ -70,7 +70,7 @@ $( document ).ready(function() {
     // TweenLite.to(window, 2, {scrollTo:{y:400}, ease:Power2.easeOut});
     TweenLite.to(window, scrollTime, {scrollTo:{y:posTop}, ease:Power3.easeOut});
   }
-  $scope.scrollToTechnologies = (time) => {
+  $scope.scrollToTechnologies = function (time) {
     console.log("you want to go to technologies");
     var scrollTime = time || 1.5;
 
@@ -102,14 +102,14 @@ $( document ).ready(function() {
   $scope.photographyView = function() {
     //add logic to test whether timeout is needed on each click
     $scope.scrollToPortfolio(0.05);
-    setTimeout(() => {
+    setTimeout(function () {
       $state.go('home.photography');
     }, 55);  
   }
 
   $scope.softwareView = function() {
     $scope.scrollToPortfolio(0.05);
-    setTimeout(() => {
+    setTimeout(function () {
       $state.go('home.software');
     }, 55);
   } 
