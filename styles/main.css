@@ -42,6 +42,9 @@ h2 {
   background-color: transparent;
   border-color: transparent; }
 
+.nav-option {
+  cursor: pointer; }
+
 div.site-nav ul.nav li.nav-option a {
   font-family: logoCursive;
   font-weight: bold;
@@ -89,7 +92,8 @@ div.site-nav ul.nav li.nav-option a {
   position: absolute;
   margin-left: -55px;
   margin-top: 500px;
-  margin-bottom: 4px; }
+  margin-bottom: 4px;
+  z-index: 1000; }
 
 #hidden-filler-div {
   float: right;
@@ -136,14 +140,18 @@ div.site-nav ul.nav li.nav-option a {
   padding-left: 20px;
   text-align: left;
   font-family: logoCursive;
-  overflow: hidden; }
+  overflow: hidden;
+  background-color: #FAFAFA;
+  height: 100vh; }
 
 #about-me-section > div > div > h1 {
   font-size: 6em;
   line-height: 0.8em; }
 
 #portfolio {
-  background-color: #F7F7F7; }
+  background-color: #F7F7F7;
+  position: relative;
+  z-index: 5; }
 
 #header-wrapper {
   border-top: solid 1px #999;
@@ -526,7 +534,9 @@ li.effect-bubba:hover p {
   padding-left: 10px;
   padding-right: 10px;
   padding-bottom: 10px;
-  background-color: white; }
+  background-color: white;
+  position: relative;
+  z-index: 5; }
 
 #technologies div div div img {
   margin-bottom: 0px; }
@@ -598,12 +608,26 @@ li.effect-bubba:hover p {
   display: block;
   font-weight: 700; }
 
+#contact-hidden {
+  visibility: hidden;
+  padding-top: 8%;
+  padding-bottom: 9%;
+  width: 100%; }
+
+.negative-z {
+  z-index: -1; }
+
+.negative-z-2 {
+  z-index: -2; }
+
 #contact {
   background-color: #292929;
   padding-top: 8%;
   padding-bottom: 9%;
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  position: fixed;
+  bottom: 0; }
 
 .contact-container {
   text-align: center;

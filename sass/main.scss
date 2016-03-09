@@ -11,6 +11,7 @@ $home-background: #292929;
 #home {
   background-color: $home-background;
   height: 100vh;
+  // z-index: -1;
   // height: 840px;
 }
 
@@ -74,6 +75,10 @@ h2 {
 .navbar-custom {
     background-color: transparent;
     border-color: transparent;
+}
+
+.nav-option {
+  cursor: pointer;
 }
 
 div.site-nav ul.nav li.nav-option a{
@@ -148,6 +153,7 @@ div.site-nav ul.nav li.nav-option a{
   margin-left: -55px;
   margin-top: 500px;
   margin-bottom: 4px;
+  z-index: 1000;
 }
 #hidden-filler-div {
   float:right;  
@@ -205,6 +211,8 @@ div.site-nav ul.nav li.nav-option a{
   text-align: left;
   font-family: logoCursive;
   overflow: hidden;
+  background-color: #FAFAFA;
+  height: 100vh;
   //display: inline-block;
   // height: 840px;
   //background-color: green;
@@ -222,6 +230,8 @@ div.site-nav ul.nav li.nav-option a{
 #portfolio {
   // padding-top: 12%;
   background-color: #F7F7F7;
+  position: relative;
+  z-index: 5
 }
 
 #header-wrapper {
@@ -691,6 +701,8 @@ li.effect-bubba:hover p {
   padding-right: 10px;
   padding-bottom: 10px;
   background-color: white;
+  position: relative;
+  z-index: 5;
 }
 
 #technologies div div div img {
@@ -781,12 +793,29 @@ li.effect-bubba:hover p {
 
 // ######### CONTACT ME ############
 
+#contact-hidden {
+  visibility: hidden;
+  padding-top: 8%;
+  padding-bottom: 9%;
+  width: 100%;
+}
+
+.negative-z {
+  z-index: -1;
+}
+.negative-z-2 {
+  z-index: -2;
+}
+
 #contact {
   background-color: $home-background;
   padding-top: 8%;
   padding-bottom: 9%;
   width: 100%;
   text-align: center;
+  position: fixed;
+  bottom: 0;
+  // z-index: -1;
 }
 
 .contact-container {

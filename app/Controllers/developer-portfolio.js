@@ -10,12 +10,6 @@ app.controller("developer-portfolio", ["$scope", "$routeParams", "$state",
       var wipeAnimation = new TimelineMax()
         // animate scroll left:
         .to("#dev-portfolio-container", 1,   {x: "-32%"})  // move in to first panel
-        
-
-        // animate to third panel
-        // .to("#dev-portfolio-container", 1,   {x: "-50%"})
-        // animate to forth panel
-        // .to("#dev-portfolio-container", 1,   {x: "-75%"})
 
       new ScrollMagic.Scene({
           triggerElement: "#portfolio",

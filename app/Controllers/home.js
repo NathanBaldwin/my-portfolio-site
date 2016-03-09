@@ -115,19 +115,50 @@ $( document ).ready(function() {
   }
 
   //fade in nav options at about me section:
-  var fadeInController = new ScrollMagic.Controller();
+  var fadeController = new ScrollMagic.Controller();
   
   var fadeInNav = new TimelineMax()
-  .to('#clear-nav', 1.5,{ opacity: 1 });
-  // var fadeout_tween = TweenMax.to('#clear-nav', .375,{ opacity: 0 });
+  .to('#clear-nav', 1,{ opacity: 1 });
 
 
   var fadein_scene = new ScrollMagic.Scene({
-    triggerElement: '#about-me-section',
+    triggerElement: '#about',
+    triggerHook: 'onEnter',
     reverse: true
   })
   .setTween(fadeInNav)
-  .addTo(fadeInController);
+  .addTo(fadeController);
 
-});
+  //fade out nav at contact section:
+  var fadeout_tween = new TimelineMax()
+  .to('#clear-nav', 1,{ opacity: 0 });
+
+  var fadeout_scene = new ScrollMagic.Scene({
+  triggerElement: '#fade-out-nav',
+  triggerHook: 'onEnter',
+  reverse: true
+  })
+  .setTween(fadeout_tween)
+  .addTo(fadeController);
+
+  // paralax effect for about me section:
+  var paralaxController = new ScrollMagic.Controller();
+  new ScrollMagic.Scene({
+          triggerElement: '#about-me-section',
+          triggerHook: 'onEnter',
+          // duration: '100%'
+        })
+        .setPin('#home')
+        .addTo(paralaxController);
+
+
+  //paralax effect for contact section:
+  new ScrollMagic.Scene({triggerElement: "#technologies"})
+      .setTween("#contact", {className:"-=negative-z"})
+  
+      .addTo(paralaxController);
+  
+
+
+  });
 }]);
