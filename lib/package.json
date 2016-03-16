@@ -1,6 +1,9 @@
 {
   "name": "modules",
   "version": "0.1.0",
+  "scripts": {
+    "postinstall": "bower install"
+  },
   "devDependencies": {
     "bower": "^1.7.7",
     "grunt": "~0.4.5",
