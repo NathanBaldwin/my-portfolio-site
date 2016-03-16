@@ -8,6 +8,19 @@ $home-background: #292929;
 //#2F8E83; aqua blue
 //#F7484E;
 
+html, body {
+  padding: 0px;
+  margin-top: align;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0;
+}
+
 #home {
   background-color: $home-background;
   height: 100vh;
@@ -86,6 +99,7 @@ div.site-nav ul.nav li.nav-option a{
   // color: black;
   font-weight: bold;
   font-size: 1.6em;
+  color: $accent-color;
 }
 
 .portfolio-title {
@@ -151,7 +165,7 @@ div.site-nav ul.nav li.nav-option a{
 #headshot {
   position: absolute;
   margin-left: -55px;
-  margin-top: 500px;
+  margin-top: 595px;
   margin-bottom: 4px;
   z-index: 1000;
 }
@@ -161,7 +175,7 @@ div.site-nav ul.nav li.nav-option a{
   width: 37px;
   // border-top-left-radius: 60%;
   // border-bottom-left-radius: 60%;
-  height: 88px;
+  height: 87px;
   // background-color: black;
   margin-left: 8px;
 }
@@ -171,7 +185,7 @@ div.site-nav ul.nav li.nav-option a{
   // border-bottom-left-radius: 60%;
   display:block;
   float: right;
-  height: 500px;
+  height: 597px;
 }
 
 #headshot-hidden {
@@ -422,6 +436,7 @@ li.effect-bubba figcaption::after {
   opacity: 0;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
+  // display: none;
 }
 
 li.effect-bubba figcaption::before {
@@ -439,6 +454,7 @@ li.effect-bubba figcaption::after {
   -webkit-transform: scale(1,0);
   transform: scale(1,0);
   opacity: 0;
+  // display: none;
 }
 
 li.effect-bubba h3, li.effect-bubba div.clock, li.effect-bubba img {
@@ -447,7 +463,9 @@ li.effect-bubba h3, li.effect-bubba div.clock, li.effect-bubba img {
   transition: transform 0.35s;
   -webkit-transform: translate3d(0,-10px,0);
   transform: translate3d(0,-10px,0);
+  // display: none;
 }
+
 
 li.effect-bubba p {
   
@@ -513,6 +531,7 @@ li.effect-bubba:hover div a img.website-link-img {
 li.effect-bubba:hover h3,
 li.effect-bubba:hover div.clock,
 li.effect-bubba:hover figcaption img,
+li.effect-bubba:hover img.link,
 li.effect-bubba:hover p {
   opacity: 1;
   -webkit-transform: translate3d(0,0,0);

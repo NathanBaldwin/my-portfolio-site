@@ -1,3 +1,15 @@
+html, body {
+  padding: 0px;
+  margin-top: align;
+  background-size: 100%;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  width: 100%;
+  overflow-x: hidden;
+  margin: 0; }
+
 #home {
   background-color: #292929;
   height: 100vh; }
@@ -48,7 +60,8 @@ h2 {
 div.site-nav ul.nav li.nav-option a {
   font-family: logoCursive;
   font-weight: bold;
-  font-size: 1.6em; }
+  font-size: 1.6em;
+  color: #E74C3C; }
 
 .portfolio-title {
   margin-top: 0;
@@ -91,7 +104,7 @@ div.site-nav ul.nav li.nav-option a {
 #headshot {
   position: absolute;
   margin-left: -55px;
-  margin-top: 500px;
+  margin-top: 595px;
   margin-bottom: 4px;
   z-index: 1000; }
 
@@ -99,14 +112,14 @@ div.site-nav ul.nav li.nav-option a {
   float: right;
   clear: both;
   width: 37px;
-  height: 88px;
+  height: 87px;
   margin-left: 8px; }
 
 .hidden-filler:before {
   content: "";
   display: block;
   float: right;
-  height: 500px; }
+  height: 597px; }
 
 #headshot-hidden {
   position: absolute;
@@ -373,6 +386,7 @@ li.effect-bubba:hover div a img.website-link-img {
 li.effect-bubba:hover h3,
 li.effect-bubba:hover div.clock,
 li.effect-bubba:hover figcaption img,
+li.effect-bubba:hover img.link,
 li.effect-bubba:hover p {
   opacity: 1;
   -webkit-transform: translate3d(0, 0, 0);

@@ -64,7 +64,7 @@ $( document ).ready(function() {
   $scope.scrollToContact = function (time) {
     var scrollTime = time || 1.5;
     console.log("you clicked scrollToPortfolio!");
-    var portfolioSec = document.getElementById("contact");
+    var portfolioSec = document.getElementById("contact-anchor");
     var posTop = portfolioSec.offsetTop;
     console.log("posTop", posTop);
     // TweenLite.to(window, 2, {scrollTo:{y:400}, ease:Power2.easeOut});
@@ -147,16 +147,19 @@ $( document ).ready(function() {
           triggerElement: '#about-me-section',
           triggerHook: 'onEnter',
           // duration: '100%'
-        })
+        }) 
         .setPin('#home')
         .addTo(paralaxController);
 
 
   //paralax effect for contact section:
-  new ScrollMagic.Scene({triggerElement: "#technologies"})
-      .setTween("#contact", {className:"-=negative-z"})
-  
-      .addTo(paralaxController);
+  new ScrollMagic.Scene({
+    triggerElement: "#trigger-z",
+    triggerHook: "onLeave"
+  })
+    .setTween("#contact", 0, {className:"-=negative-z"})
+
+    .addTo(paralaxController);
   
 
 

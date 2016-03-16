@@ -31,5 +31,9 @@ app.controller("developer-portfolio", ["$scope", "$routeParams", "$state",
     console.log("you left!");
     $state.go('home.noCaption');
   }
+
+  $scope.preventDefault = function() {
+    event.preventDefault();
+  }
 	
 }])
