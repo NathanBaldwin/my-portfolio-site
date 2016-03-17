@@ -201,6 +201,7 @@ div.site-nav ul.nav li.nav-option a{
   padding-right: 20px;
   text-align: right;
   color: white;
+  min-height: 850px;
   height: 100vh;
   overflow: hidden;
   //width: 50%;
@@ -227,6 +228,7 @@ div.site-nav ul.nav li.nav-option a{
   overflow: hidden;
   background-color: #FAFAFA;
   height: 100vh;
+  min-height: 850px;
   //display: inline-block;
   // height: 840px;
   //background-color: green;
@@ -344,8 +346,6 @@ li.item-container div.outer div.inner {
 
 #clocker {
   background-color: #5B8623;
-  margin-left: 8px;
-  //font-family: 'Quicksand', sans-serif;
 }
 #clocker-links {
   color: black;
