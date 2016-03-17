@@ -10,6 +10,9 @@ html, body {
   overflow-x: hidden;
   margin: 0; }
 
+h1 {
+  margin: 5px 0px 10px; }
+
 #home {
   background-color: #292929;
   height: 100vh; }
@@ -101,10 +104,13 @@ div.site-nav ul.nav li.nav-option a {
   padding-right: 10%;
   height: 100px; }
 
+#putting {
+  margin-top: 0px; }
+
 #headshot {
   position: absolute;
   margin-left: -55px;
-  margin-top: 595px;
+  margin-top: 500px;
   margin-bottom: 4px;
   z-index: 1000; }
 
@@ -112,14 +118,14 @@ div.site-nav ul.nav li.nav-option a {
   float: right;
   clear: both;
   width: 37px;
-  height: 87px;
+  height: 91px;
   margin-left: 8px; }
 
 .hidden-filler:before {
-  content: "";
+  content: '';
   display: block;
   float: right;
-  height: 597px; }
+  height: 497px; }
 
 #headshot-hidden {
   position: absolute;
@@ -394,7 +400,8 @@ li.effect-bubba:hover p {
   transform: translate3d(0, 0, 0); }
 
 .port-caption {
-  font-family: shree; }
+  font-family: shree;
+  font-size: 88%; }
 
 .fade-in {
   opacity: 1;
@@ -403,14 +410,13 @@ li.effect-bubba:hover p {
   transition: 1s linear all; }
 
 .view-margin {
-  margin-top: 25px;
+  margin-top: 20px;
   position: absolute;
   left: 0;
   right: 0; }
 
 #caption-view {
-  height: 33vh;
-  margin-top: 10px; }
+  height: 33vh; }
 
 [ui-view="caption"].ng-enter, [ui-view="caption"].ng-leave {
   position: absolute;

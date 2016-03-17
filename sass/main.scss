@@ -21,6 +21,10 @@ html, body {
   margin: 0;
 }
 
+h1 {
+  margin: 5px 0px 10px;
+}
+
 #home {
   background-color: $home-background;
   height: 100vh;
@@ -162,10 +166,14 @@ div.site-nav ul.nav li.nav-option a{
   height: 100px;
 }
 //********************* ABOUT ME ******************
+#putting {
+  margin-top: 0px;
+}
+
 #headshot {
   position: absolute;
   margin-left: -55px;
-  margin-top: 595px;
+  margin-top: 500px;
   margin-bottom: 4px;
   z-index: 1000;
 }
@@ -175,17 +183,17 @@ div.site-nav ul.nav li.nav-option a{
   width: 37px;
   // border-top-left-radius: 60%;
   // border-bottom-left-radius: 60%;
-  height: 87px;
+  height: 91px;
   // background-color: black;
   margin-left: 8px;
 }
 .hidden-filler:before {
-  content: '' ;
+  content: '';
   // border-top-left-radius: 60%;
   // border-bottom-left-radius: 60%;
   display:block;
   float: right;
-  height: 597px;
+  height: 497px;
 }
 
 #headshot-hidden {
@@ -540,6 +548,7 @@ li.effect-bubba:hover p {
 
 .port-caption {
   font-family: shree;
+  font-size: 88%;
 }
 
 .fade-in {
@@ -551,7 +560,7 @@ li.effect-bubba:hover p {
 //###########caption animations
 
 .view-margin {
-  margin-top: 25px;
+  margin-top: 20px;
   position: absolute;
   left: 0;
   right: 0;
@@ -559,8 +568,6 @@ li.effect-bubba:hover p {
 
 #caption-view {
   height: 33vh;
-  margin-top: 10px;
-  // border-top: solid 1px #999;
 }
 [ui-view="caption"].ng-enter, [ui-view="caption"].ng-leave {
   position: absolute;
