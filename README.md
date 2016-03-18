@@ -6,9 +6,12 @@ Throughout the process, I became familiar with some fun, new technologies such a
 
 In order to create the handwriting animation on the 'home' page, I created an SVG graphic in Adobe Illustrator, creating a path that covered the font, and then making the font into a clipping mask over this path. I used GreenSock to animate the 'revealing' of this path under the clipping mask.
 
-Even though it is admittedly a bit overkill for this project, I wanted to become more familiar with Angular UI-Router. Thus, I employed UI-Router's view changes and state changes to architect the portfolio section of the site.
+Even though it's admittedly a bit overkill for this project, I wanted to become more familiar with Angular UI-Router. Thus, I employed UI-Router's view changes and state changes to architect the portfolio section of the site.
+
+I deployed this site via Digital Ocean using NGINX.
 
 Up next: make it completely mobile friendly!
+
 
 
 
