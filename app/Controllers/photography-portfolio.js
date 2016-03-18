@@ -27,11 +27,7 @@ app.controller("photography-portfolio", ["$scope", "$routeParams",
       // define movement of panels
       var wipeAnimation = new TimelineMax()
         // animate to second panel
-        .to("#photography-portfolio-container", 1,   {x: "-75%"})  // move in to first panel
-        // animate to third panel
-        // .to("#slideContainer-photography", 1,   {x: "-50%"})
-        // animate to forth panel
-        // .to("#slideContainer-photography", 1,   {x: "-75%"})
+        .to("#photography-portfolio-container", 1,   {x: "-72.5%"})
 
       new ScrollMagic.Scene({
           triggerElement: "#portfolio",

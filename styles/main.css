@@ -268,7 +268,7 @@ li.item-container div.outer div.inner {
   font-weight: 100; }
 
 li.photo-item-container {
-  width: 12.5%;
+  width: 10.2%;
   border-radius: 5px;
   position: relative;
   list-style: none;
@@ -276,7 +276,7 @@ li.photo-item-container {
   margin-right: 5px; }
 
 #photography-portfolio-container {
-  width: 400%;
+  width: 500%;
   /* to contain 4 panels, each with 100% of window width */
   height: 100%; }
 
