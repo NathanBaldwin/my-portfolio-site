@@ -21,9 +21,13 @@ app.controller("developer-portfolio", ["$scope", "$routeParams", "$state",
         .addTo(scrollController);
     });
 
-  $scope.showCaption = function () {
+  $scope.showClockerCaption = function () {
     console.log("you hovered over bubba");
     $state.go('home.software');
+  }
+
+  $scope.showClockerMobileCaption = function () {
+    $state.go('home.clockerMobile')
   }
 
 
