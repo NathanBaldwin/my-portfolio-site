@@ -351,6 +351,9 @@ li.item-container div.outer div.inner {
 
 
 //#### CLOCKER:
+.underline {
+  text-decoration: underline;
+}
 
 #clocker {
   background-color: #5B8623;
@@ -366,11 +369,20 @@ li.item-container div.outer div.inner {
 }
 
 //#### NEXT PROJECT:
+#clocker-mobile-title {
+  width: 66%;
+  margin-left: 17%;
+  margin-top: 18%;
+}
 
 #next-item {
   background-color: yellow;
   font-family: Helvetica;
   font-weight: 100;
+}
+#clocker-mobile-link {
+  width: 77%;
+  left: 12%;
 }
 
 // #### THRID PROJECT:
@@ -523,7 +535,7 @@ li.effect-bubba:hover figcaption::after {
 }
 
 li.effect-bubba:hover div.outer div.inner {
-  opacity: 0.5;
+  opacity: 0.4;
 }
 li.effect-bubba:hover div a img.github-img {
   opacity: 1;
