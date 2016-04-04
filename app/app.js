@@ -24,6 +24,13 @@ app.config(function($stateProvider, $urlRouterProvider) {
       }
     }
   })
+  .state('home.clockerMobile', {
+    views: {
+      'caption@home': {
+        templateUrl: "Partials/clockerMobileCaption.html"
+      }
+    }
+  })
   .state('home.noCaption', {
     views: {
       'caption@home': {
