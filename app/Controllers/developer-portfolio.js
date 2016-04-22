@@ -22,7 +22,6 @@ app.controller("developer-portfolio", ["$scope", "$routeParams", "$state",
     });
 
   $scope.showClockerCaption = function () {
-    console.log("you hovered over bubba");
     $state.go('home.software');
   }
 
@@ -30,9 +29,7 @@ app.controller("developer-portfolio", ["$scope", "$routeParams", "$state",
     $state.go('home.clockerMobile')
   }
 
-
   $scope.hideCaption = function () {
-    console.log("you left!");
     $state.go('home.noCaption');
   }
 
