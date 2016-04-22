@@ -15,7 +15,8 @@ h1 {
 
 #home {
   background-color: #292929;
-  height: 100vh; }
+  height: 100vh;
+  width: 100vw; }
 
 @font-face {
   font-family: titles;
@@ -133,6 +134,15 @@ div.site-nav ul.nav li.nav-option a {
   margin-top: 500px;
   margin-bottom: 4px; }
 
+@media screen and (min-width: 768px) {
+  .about-container {
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    position: relative; }
+
+  .about-container div.flex-col {
+    width: 50%; } }
 #about-me {
   font-family: logoCursive;
   padding-top: 20px;
@@ -140,10 +150,13 @@ div.site-nav ul.nav li.nav-option a {
   padding-right: 20px;
   text-align: right;
   color: white;
-  min-height: 850px;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
-  background-color: #E74C3C; }
+  background-color: #E74C3C;
+  position: relative; }
+
+.last-paragraph {
+  margin-bottom: 15px; }
 
 #about {
   color: #292929; }
@@ -156,14 +169,13 @@ div.site-nav ul.nav li.nav-option a {
   color: #E74C3C; }
 
 #about-me-title {
+  position: relative;
   padding-top: 20px;
   padding-left: 20px;
   text-align: left;
   font-family: logoCursive;
   overflow: hidden;
-  background-color: #FAFAFA;
-  height: 100vh;
-  min-height: 850px; }
+  background-color: #FAFAFA; }
 
 #about-me-section > div > div > h1 {
   font-size: 6em;
