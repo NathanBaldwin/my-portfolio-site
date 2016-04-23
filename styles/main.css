@@ -134,21 +134,15 @@ div.site-nav ul.nav li.nav-option a {
   margin-top: 500px;
   margin-bottom: 4px; }
 
-@media screen and (min-width: 768px) {
-  .about-container {
-    display: -ms-flex;
-    display: -webkit-flex;
-    display: flex;
-    position: relative; }
+.about-container div.flex-col p {
+  text-align: center; }
 
-  .about-container div.flex-col {
-    width: 50%; } }
 #about-me {
   font-family: logoCursive;
   padding-top: 20px;
-  padding-left: 18%;
-  padding-right: 20px;
-  text-align: right;
+  padding-left: 11%;
+  padding-right: 11%;
+  padding-bottom: 10px;
   color: white;
   min-height: 100vh;
   overflow: hidden;
@@ -159,7 +153,10 @@ div.site-nav ul.nav li.nav-option a {
   margin-bottom: 15px; }
 
 #about {
-  color: #292929; }
+  color: #292929;
+  text-align: right;
+  margin-right: 5px;
+  display: none; }
 
 .spacer {
   margin-bottom: 15px;
@@ -177,10 +174,39 @@ div.site-nav ul.nav li.nav-option a {
   overflow: hidden;
   background-color: #FAFAFA; }
 
-#about-me-section > div > div > h1 {
+#about-me-section div div div h1 {
   font-size: 6em;
   line-height: 0.8em; }
 
+#about-me-mobile-title {
+  text-align: center;
+  color: #292929;
+  margin-bottom: 25px; }
+
+@media (min-width: 768px) {
+  .about-container {
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    position: relative; }
+
+  .about-container div.flex-col {
+    width: 50%; }
+
+  .about-container div.flex-col p {
+    text-align: right; }
+
+  div #about {
+    display: block; }
+
+  #about-me-mobile-title {
+    display: none; }
+
+  #about-me {
+    padding-top: 20px;
+    padding-left: 18%;
+    padding-right: 20px;
+    padding-bottom: 10px; } }
 #portfolio {
   background-color: #F7F7F7;
   position: relative;
