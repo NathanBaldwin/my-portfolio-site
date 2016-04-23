@@ -28,8 +28,7 @@ h1 {
 #home {
   background-color: $home-background;
   height: 100vh;
-  // z-index: -1;
-  // height: 840px;
+  width: 100vw;
 }
 
 @font-face {
@@ -80,10 +79,6 @@ h2 {
   font-size: 5.5em;
 }
 
-// .link-title {
-//   font-family: asenine;
-// }
-
 // ###### NAV #######
 #clear-nav {
   opacity: 0;
@@ -109,15 +104,9 @@ div.site-nav ul.nav li.nav-option a{
 .portfolio-title {
   margin-top: 0;
   padding-top: 30px;
-  // font-family: Helvetica;
-  // font-family: shree;
   font-family: titles;
   text-align: center;
   font-weight: 900;
-  // font-size: 9em;
-  // font-family: adobeFans;
-  // width: 20%;
-  // margin: 0 auto;
 }
 
 // ###### HOME ############################
@@ -127,31 +116,24 @@ div.site-nav ul.nav li.nav-option a{
   -o-transition:all .45s ease-in-out;
   transition:all .45s ease-in-out;
 }
+
 .animate-switch.ng-leave {
   display:none;
-  // position: absolute;
-  // top: 0;
-  // bottom: 0;
-  // left: 0;
-  // right: 0;
   opacity: 1;
 }
+
 .animate-switch.ng-leave.ng-leave-active{
   display:none;
-  // position: absolute;
-  // top: 0;
-  // bottom: 0;
-  // left: 0;
-  // right: 0;
   opacity: 0;
 }
+
 .animate-switch.ng-enter {
   opacity: 0;
 }
+
 .animate-switch.ng-enter.ng-enter-active {
   opacity:1;
 }
-
 
 #title-container{
   padding-top: 12%;
@@ -165,6 +147,7 @@ div.site-nav ul.nav li.nav-option a{
   padding-right: 10%;
   height: 100px;
 }
+
 //********************* ABOUT ME ******************
 #putting {
   margin-top: 0px;
@@ -177,24 +160,17 @@ div.site-nav ul.nav li.nav-option a{
   margin-bottom: 4px;
   z-index: 1000;
 }
+
 #hidden-filler-div {
-  float:right;  
-  clear:both;
-  width: 37px;
-  // border-top-left-radius: 60%;
-  // border-bottom-left-radius: 60%;
-  height: 91px;
-  // background-color: black;
-  margin-left: 8px;
-}
-.hidden-filler:before {
-  content: '';
-  // border-top-left-radius: 60%;
-  // border-bottom-left-radius: 60%;
-  display:block;
   float: right;
-  height: 497px;
+  clear: both;
+  margin-left: 2px;
+  margin-right: -63px;
+  shape-outside: url("../lib/images/octagon_headshot-3-border.png");
+  shape-margin: 3px;
+  visibility: hidden;
 }
+
 
 #headshot-hidden {
   position: absolute;
@@ -202,57 +178,124 @@ div.site-nav ul.nav li.nav-option a{
   margin-top: 500px;
   margin-bottom: 4px;
 }
+
+.about-container div.flex-col p {
+  text-align: left;
+}
+
+
 #about-me {
   font-family: logoCursive;
   padding-top: 20px;
-  padding-left: 18%;
-  padding-right: 20px;
-  text-align: right;
+  padding-left: 11%;
+  padding-right: 11%;
+  padding-bottom: 10px;
   color: white;
-  min-height: 850px;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
-  //width: 50%;
-  //display: inline-block;
   background-color: $accent-color;
+  position: relative;
 }
+
+.last-paragraph {
+  margin-bottom: 15px;
+}
+
 #about {
   color: $home-background;
+  text-align: right;
+  margin-right: 5px;
+  display: none;
 }
 
 .spacer {
   margin-bottom: 15px;
   margin-top: 15px;
 }
+
 #me {
   color: $accent-color;
 }
 
 #about-me-title {
+  position: relative;
   padding-top: 20px;
   padding-left: 20px;
   text-align: left;
   font-family: logoCursive;
   overflow: hidden;
   background-color: #FAFAFA;
-  height: 100vh;
-  min-height: 850px;
-  //display: inline-block;
-  // height: 840px;
-  //background-color: green;
-  //width: 50%;
 }
 
-#about-me-section>div>div>h1 {
+#about-me-section div div div h1 {
   font-size: 6em;
   line-height: 0.8em;
-  //color: #292929;
+}
+
+#about-me-mobile-title {
+  text-align: center;
+  color: #292929;
+  margin-bottom: 25px;
+}
+
+#headshot-mobile {
+  shape-outside: url('../lib/images/octagon_headshot-3-border.png');
+  shape-margin: 11px;
+  margin-right: 10px;
+
+}
+
+.wrap-text {
+  float: left;
+}
+
+@media (min-width: 800px) {
+  .about-container {
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    position: relative;
+  }
+
+  .about-container div.flex-col {
+    width: 50%;
+  }
+
+  .about-container div.flex-col p {
+    text-align: right;
+  }
+
+  div #about {
+    display: block;
+  }
+
+  #about-me-mobile-title {
+    display: none;
+  }
+
+  #about-me {
+    padding-top: 20px;
+    padding-left: 16.7%;
+    padding-right: 20px;
+    padding-bottom: 10px;
+  }
+
+  .hidden-filler:before {
+    content: '';
+    display:block;
+    float: right;
+    height: 480px;
+  }
+
+  #headshot-mobile {
+    display: none;
+  }
+
 }
 
 
 //******************** PORTFOLIO ******************
 #portfolio {
-  // padding-top: 12%;
   background-color: #F7F7F7;
   position: relative;
   z-index: 5
@@ -276,20 +319,17 @@ div.site-nav ul.nav li.nav-option a{
   text-align: center;
 }
 
-
 #portfolio-header {
   cursor: pointer;
 }
 
 #dev-portfolio-container {
-  //border: solid 1px $home-background;
   width: 150%;
   padding-left: 10px;
 }
 
 li.item-container {
   width: 24%;
-  //border: solid 1px black;
   border-radius: 5px;
   position: relative;
   list-style: none;
@@ -300,7 +340,6 @@ li.item-container {
 
 li.item-container div.outer {
   width: 100%;
-  //border: solid 1px green;
   border-radius: 5px;
   padding-top: 75%;
 }
@@ -312,8 +351,6 @@ li.item-container div.outer div.inner {
   right: 0;
   bottom: 0;
   border-radius: 5px;
-  // border: solid 1px black;
-  //background-color: red;
 }
 
 
@@ -323,9 +360,7 @@ li.item-container div.outer div.inner {
     padding-bottom: 6px;
     padding-top: 10px;
     padding-bottom: 5px;
-    // background-color: $home-background;
     width: 100%;
-    // height: 100%;
     overflow: hidden;
     -webkit-perspective: 1000;
             perspective: 1000;
@@ -333,13 +368,11 @@ li.item-container div.outer div.inner {
 
 .port-container {
   width: 400%; /* to contain 4 panels, each with 100% of window width */
-  // height: 100%;
   top: 50%;
 }
 
 .port-container li img {
   bottom: 0;
-  //height: 100px;
   left: 0;
   margin: auto;
   position: absolute;
@@ -347,8 +380,6 @@ li.item-container div.outer div.inner {
   right: 0;
   width: 95%;
 }
-
-
 
 //#### CLOCKER:
 .underline {
@@ -363,7 +394,6 @@ li.item-container div.outer div.inner {
 }
 
 #clocker-title {
-  //color: #E3E3E3;
   width: 66%;
   margin-left: 17%;
 }
@@ -393,7 +423,6 @@ li.item-container div.outer div.inner {
 }
 
 // ### FOURTH PROJECT:
-
 #fourth-item {
   background-color: orange;
   font-family: Helvetica;
@@ -401,10 +430,8 @@ li.item-container div.outer div.inner {
 }
 
 // ######### Photography Portfolio
-
 li.photo-item-container {
   width: 10.2%;
-  //border: solid 1px black;
   border-radius: 5px;
   position: relative;
   list-style: none;
@@ -456,7 +483,6 @@ li.effect-bubba figcaption::after {
   opacity: 0;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
-  // display: none;
 }
 
 li.effect-bubba figcaption::before {
@@ -474,21 +500,17 @@ li.effect-bubba figcaption::after {
   -webkit-transform: scale(1,0);
   transform: scale(1,0);
   opacity: 0;
-  // display: none;
 }
 
 li.effect-bubba h3, li.effect-bubba div.clock, li.effect-bubba img {
-  //margin-top: 30%;
   -webkit-transition: -webkit-transform 0.35s;
   transition: transform 0.35s;
   -webkit-transform: translate3d(0,-10px,0);
   transform: translate3d(0,-10px,0);
-  // display: none;
 }
 
 
 li.effect-bubba p {
-  
   opacity: 0;
   padding-left: 19%;
     padding-right: 19%;
@@ -516,7 +538,6 @@ li.effect-bubba a img.website-link-img {
   opacity: 0;
   position: absolute;
   z-index: 1000;
-  // left: 19%;
   top: 27%;
   right: 15%;
   width: 60%;
@@ -595,8 +616,7 @@ li.effect-bubba:hover p {
   opacity: 0;
   -webkit-transform:translate3d(0, 20px, 0);
   -moz-transform:translate3d(0, 20px, 0);
-  transform:translate3d(0, 20px, 0);
-  
+  transform:translate3d(0, 20px, 0);  
 }
 
 [ui-view="caption"].ng-enter-active {
@@ -671,11 +691,9 @@ li.effect-bubba:hover p {
   border-radius: 5px;
   top: 50%;
   left: 50%;
-  
   -webkit-transform-origin: 4px 4px;
      -moz-transform-origin: 4px 4px;
           transform-origin: 4px 4px;
-  
   -webkit-animation: minhand 2s linear infinite;
      -moz-animation: minhand 2s linear infinite;
           animation: minhand 2s linear infinite;
@@ -687,11 +705,9 @@ li.effect-bubba:hover p {
   border-radius: 5px;
   top: 50%;
   left: 50%;
-  
   -webkit-transform-origin: 4px 4px;
      -moz-transform-origin: 4px 4px;
           transform-origin: 4px 4px;
-  
   -webkit-animation: hrhand 8s linear infinite;
      -moz-animation: hrhand 8s linear infinite;
           animation: hrhand 8s linear infinite;
@@ -701,10 +717,12 @@ li.effect-bubba:hover p {
     0%{-webkit-transform:rotate(0deg)}
     100%{-webkit-transform:rotate(360deg)}
 }
+
 @-moz-keyframes minhand {
     0%{-moz-transform:rotate(0deg)}
     100%{-moz-transform:rotate(360deg)}
 }
+
 @keyframes minhand {
     0%{transform:rotate(0deg)}
     100%{transform:rotate(360deg)}
@@ -725,11 +743,8 @@ li.effect-bubba:hover p {
 
 //###############TECHNOLOGIES
 #tech-used-title {
-  // padding-top: 10px;
   width: 33%;
   margin-left: 1%;
-  // position: relative;
-  // display: inline-block;
   vertical-align: top;
   margin-top: 7px;
 }
@@ -745,7 +760,6 @@ li.effect-bubba:hover p {
 
 #technologies div div div img {
   margin-bottom: 0px;
-  // float: left;
 }
 
 .thumbnail {
@@ -760,7 +774,6 @@ li.effect-bubba:hover p {
   display: inline-block;
   position: relative;
   text-align: center;
-  // border: solid 1px #ddd;
   padding-left: 2px;
   padding-right: 2px;
   border-radius: 5px;
@@ -773,9 +786,7 @@ li.effect-bubba:hover p {
 }
 
 #technologies div div div.outer {
-  // margin-bottom: 5px;
   padding-top: 117%;
-  // display: inline-block;
   position: relative;
   text-align: center;
   width: 100%;
@@ -796,7 +807,6 @@ li.effect-bubba:hover p {
   bottom: 0;
   display: inline-block;
   position: absolute;
-  // text-align: center;
   width: 100%;
 }
 
@@ -853,13 +863,11 @@ li.effect-bubba:hover p {
   text-align: center;
   position: fixed;
   bottom: 0;
-  // z-index: -1;
 }
 
 .contact-container {
   text-align: center;
   display: inline-block;
-  // width: 70%;
   margin: 0 auto;
 }
 
@@ -880,10 +888,6 @@ li.effect-bubba:hover p {
   margin-bottom: 0px;
 }
 
-// #connect-title-outer {
-//   position: relative;
-//   border-top: solid 2px black;
-// }
 i {
   color: black;
 }

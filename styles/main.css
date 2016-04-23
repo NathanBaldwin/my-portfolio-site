@@ -15,7 +15,8 @@ h1 {
 
 #home {
   background-color: #292929;
-  height: 100vh; }
+  height: 100vh;
+  width: 100vw; }
 
 @font-face {
   font-family: titles;
@@ -117,15 +118,11 @@ div.site-nav ul.nav li.nav-option a {
 #hidden-filler-div {
   float: right;
   clear: both;
-  width: 37px;
-  height: 91px;
-  margin-left: 8px; }
-
-.hidden-filler:before {
-  content: '';
-  display: block;
-  float: right;
-  height: 497px; }
+  margin-left: 2px;
+  margin-right: -63px;
+  shape-outside: url("../lib/images/octagon_headshot-3-border.png");
+  shape-margin: 3px;
+  visibility: hidden; }
 
 #headshot-hidden {
   position: absolute;
@@ -133,20 +130,29 @@ div.site-nav ul.nav li.nav-option a {
   margin-top: 500px;
   margin-bottom: 4px; }
 
+.about-container div.flex-col p {
+  text-align: left; }
+
 #about-me {
   font-family: logoCursive;
   padding-top: 20px;
-  padding-left: 18%;
-  padding-right: 20px;
-  text-align: right;
+  padding-left: 11%;
+  padding-right: 11%;
+  padding-bottom: 10px;
   color: white;
-  min-height: 850px;
-  height: 100vh;
+  min-height: 100vh;
   overflow: hidden;
-  background-color: #E74C3C; }
+  background-color: #E74C3C;
+  position: relative; }
+
+.last-paragraph {
+  margin-bottom: 15px; }
 
 #about {
-  color: #292929; }
+  color: #292929;
+  text-align: right;
+  margin-right: 5px;
+  display: none; }
 
 .spacer {
   margin-bottom: 15px;
@@ -156,19 +162,64 @@ div.site-nav ul.nav li.nav-option a {
   color: #E74C3C; }
 
 #about-me-title {
+  position: relative;
   padding-top: 20px;
   padding-left: 20px;
   text-align: left;
   font-family: logoCursive;
   overflow: hidden;
-  background-color: #FAFAFA;
-  height: 100vh;
-  min-height: 850px; }
+  background-color: #FAFAFA; }
 
-#about-me-section > div > div > h1 {
+#about-me-section div div div h1 {
   font-size: 6em;
   line-height: 0.8em; }
 
+#about-me-mobile-title {
+  text-align: center;
+  color: #292929;
+  margin-bottom: 25px; }
+
+#headshot-mobile {
+  shape-outside: url("../lib/images/octagon_headshot-3-border.png");
+  shape-margin: 11px;
+  margin-right: 10px; }
+
+.wrap-text {
+  float: left; }
+
+@media (min-width: 800px) {
+  .about-container {
+    display: -ms-flex;
+    display: -webkit-flex;
+    display: flex;
+    position: relative; }
+
+  .about-container div.flex-col {
+    width: 50%; }
+
+  .about-container div.flex-col p {
+    text-align: right; }
+
+  div #about {
+    display: block; }
+
+  #about-me-mobile-title {
+    display: none; }
+
+  #about-me {
+    padding-top: 20px;
+    padding-left: 16.7%;
+    padding-right: 20px;
+    padding-bottom: 10px; }
+
+  .hidden-filler:before {
+    content: '';
+    display: block;
+    float: right;
+    height: 480px; }
+
+  #headshot-mobile {
+    display: none; } }
 #portfolio {
   background-color: #F7F7F7;
   position: relative;
