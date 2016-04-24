@@ -215,6 +215,7 @@ div.site-nav ul.nav li.nav-option a{
 
 #me {
   color: $accent-color;
+  display: none;
 }
 
 #about-me-title {
@@ -247,6 +248,22 @@ div.site-nav ul.nav li.nav-option a{
 
 .wrap-text {
   float: left;
+}
+
+@media (max-width: 800px) {
+  #about-me-title {
+    height: 100vh;
+    padding-left: 65px;
+    padding-top: 55px;
+  }
+
+  #about-me-title h2 {
+    line-height: 92px;
+  }
+
+  #headshot {
+    display: none;
+  }
 }
 
 @media (min-width: 800px) {
@@ -289,6 +306,10 @@ div.site-nav ul.nav li.nav-option a{
 
   #headshot-mobile {
     display: none;
+  }
+
+  #me {
+    display: block;
   }
 
 }

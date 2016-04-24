@@ -159,7 +159,8 @@ div.site-nav ul.nav li.nav-option a {
   margin-top: 15px; }
 
 #me {
-  color: #E74C3C; }
+  color: #E74C3C;
+  display: none; }
 
 #about-me-title {
   position: relative;
@@ -187,6 +188,17 @@ div.site-nav ul.nav li.nav-option a {
 .wrap-text {
   float: left; }
 
+@media (max-width: 800px) {
+  #about-me-title {
+    height: 100vh;
+    padding-left: 65px;
+    padding-top: 55px; }
+
+  #about-me-title h2 {
+    line-height: 92px; }
+
+  #headshot {
+    display: none; } }
 @media (min-width: 800px) {
   .about-container {
     display: -ms-flex;
@@ -219,7 +231,10 @@ div.site-nav ul.nav li.nav-option a {
     height: 480px; }
 
   #headshot-mobile {
-    display: none; } }
+    display: none; }
+
+  #me {
+    display: block; } }
 #portfolio {
   background-color: #F7F7F7;
   position: relative;
