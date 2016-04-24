@@ -51,6 +51,9 @@ h2 {
   font-family: titles;
   font-size: 5.5em; }
 
+#bs-example-navbar-collapse-1 {
+  background-color: white; }
+
 #clear-nav {
   opacity: 0; }
 
