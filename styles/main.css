@@ -51,9 +51,6 @@ h2 {
   font-family: titles;
   font-size: 5.5em; }
 
-#bs-example-navbar-collapse-1 {
-  background-color: white; }
-
 #clear-nav {
   opacity: 0; }
 
@@ -191,7 +188,10 @@ div.site-nav ul.nav li.nav-option a {
 .wrap-text {
   float: left; }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
+  #bs-example-navbar-collapse-1 {
+    background-color: white; }
+
   #about-me-title {
     height: 100vh;
     padding-left: 65px;
@@ -202,7 +202,7 @@ div.site-nav ul.nav li.nav-option a {
 
   #headshot {
     display: none; } }
-@media (min-width: 800px) {
+@media (min-width: 768px) {
   .about-container {
     display: -ms-flex;
     display: -webkit-flex;
@@ -252,12 +252,6 @@ div.site-nav ul.nav li.nav-option a {
   background-color: #292929;
   color: #E74C3C; }
 
-.pos-center {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center; }
-
 #portfolio-header {
   cursor: pointer; }
 
@@ -266,7 +260,7 @@ div.site-nav ul.nav li.nav-option a {
   padding-left: 10px; }
 
 li.item-container {
-  width: 24%;
+  width: 20%;
   border-radius: 5px;
   position: relative;
   list-style: none;
@@ -480,7 +474,24 @@ li.effect-bubba:hover p {
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0); }
 
+.pos-center {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center; }
+
+#height {
+  height: 100vh; }
+
+#caption-view {
+  height: 100%; }
+
+#caption {
+  display: inline-block; }
+
 .port-caption {
+  display: inline-block;
+  vertical-align: middle;
   font-family: shree;
   font-size: 88%; }
 
@@ -495,9 +506,6 @@ li.effect-bubba:hover p {
   position: absolute;
   left: 0;
   right: 0; }
-
-#caption-view {
-  height: 33vh; }
 
 [ui-view="caption"].ng-enter, [ui-view="caption"].ng-leave {
   position: absolute;

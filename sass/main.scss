@@ -80,9 +80,6 @@ h2 {
 }
 
 // ###### NAV #######
-#bs-example-navbar-collapse-1 {
-  background-color: white;
-}
 
 #clear-nav {
   opacity: 0;
@@ -254,7 +251,11 @@ div.site-nav ul.nav li.nav-option a{
   float: left;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
+  #bs-example-navbar-collapse-1 {
+    background-color: white;
+  }
+
   #about-me-title {
     height: 100vh;
     padding-left: 65px;
@@ -270,7 +271,7 @@ div.site-nav ul.nav li.nav-option a{
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 768px) {
   .about-container {
     display: -ms-flex;
     display: -webkit-flex;
@@ -320,6 +321,8 @@ div.site-nav ul.nav li.nav-option a{
 
 
 //******************** PORTFOLIO ******************
+
+
 #portfolio {
   background-color: #F7F7F7;
   position: relative;
@@ -337,12 +340,7 @@ div.site-nav ul.nav li.nav-option a{
   color: $accent-color;
 }
 
-.pos-center {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
+
 
 #portfolio-header {
   cursor: pointer;
@@ -354,7 +352,7 @@ div.site-nav ul.nav li.nav-option a{
 }
 
 li.item-container {
-  width: 24%;
+  width: 20%;
   border-radius: 5px;
   position: relative;
   list-style: none;
@@ -604,7 +602,38 @@ li.effect-bubba:hover p {
   transform: translate3d(0,0,0);
 }
 
+.pos-center {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#height {
+  height: 100vh;
+  // display: -ms-flexbox;
+  // display: -webkit-flex;
+  // display: flex;
+
+  // flex-flow: column;
+  // height: 100%;
+  // align-items: center;
+}
+
+#caption-view {
+  // // flex: 1;
+  // background-color: blue;
+  height: 100%;
+}
+
+#caption {
+  display: inline-block;
+}
+
 .port-caption {
+  display: inline-block;
+  vertical-align: middle;
+
   font-family: shree;
   font-size: 88%;
 }
@@ -624,9 +653,10 @@ li.effect-bubba:hover p {
   right: 0;
 }
 
-#caption-view {
-  height: 33vh;
-}
+// #caption-view {
+//   height: 33vh;
+// }
+
 [ui-view="caption"].ng-enter, [ui-view="caption"].ng-leave {
   position: absolute;
   left: 0;
