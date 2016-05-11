@@ -80,6 +80,11 @@ h2 {
 }
 
 // ###### NAV #######
+
+html body div div.scrollmagic-pin-spacer {
+  height: 100vh !important;
+}
+
 #clear-nav {
   opacity: 0;
 }
@@ -250,7 +255,11 @@ div.site-nav ul.nav li.nav-option a{
   float: left;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 768px) {
+  #bs-example-navbar-collapse-1 {
+    background-color: white;
+  }
+
   #about-me-title {
     height: 100vh;
     padding-left: 65px;
@@ -264,9 +273,66 @@ div.site-nav ul.nav li.nav-option a{
   #headshot {
     display: none;
   }
+
+  div.wrap.center.clock {
+    width: 70px;
+    height: 70px;
+  }
 }
 
-@media (min-width: 800px) {
+@media (max-width: 650px) {
+  div.wrap.center.clock {
+    display: none;
+  }
+
+  img#clocker-title {
+    margin-top: 34%;
+  }
+
+  h2.portfolio-title {
+    font-size: 3em;
+  }
+
+  div.port-caption p {
+    font-size: 1.1em;
+  }
+
+  div #technologies div div div h4 {
+    font-size: 70%;
+  }
+
+  #about-me-title {
+    padding-left: 35px;
+    padding-top: 33px;
+  }
+
+  #about-me-section div div div h1 {
+    font-size: 5em;
+  }
+
+  div.about-container div p {
+    font-size: 1.2em;
+  }
+
+  h1#connect-title {
+    font-size: 3em;
+  }
+
+  a i.fa-5x {
+    font-size: 4em;
+  }
+
+  a i.fa-4x {
+    font-size: 3em;
+  }
+
+  img.comingSoon {
+    margin-top: 20px;
+    margin-left: 6px;
+  }
+}
+
+@media (min-width: 768px) {
   .about-container {
     display: -ms-flex;
     display: -webkit-flex;
@@ -316,10 +382,14 @@ div.site-nav ul.nav li.nav-option a{
 
 
 //******************** PORTFOLIO ******************
+
+
 #portfolio {
   background-color: #F7F7F7;
   position: relative;
-  z-index: 5
+  z-index: 5;
+  width: 100vw !important;
+  margin: 0 !important;
 }
 
 #header-wrapper {
@@ -333,13 +403,6 @@ div.site-nav ul.nav li.nav-option a{
   color: $accent-color;
 }
 
-.pos-center {
-  width: 80%;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-
 #portfolio-header {
   cursor: pointer;
 }
@@ -349,8 +412,13 @@ div.site-nav ul.nav li.nav-option a{
   padding-left: 10px;
 }
 
+.comingSoon {
+  margin-top: 30px;
+  margin-left: 6px;
+}
+
 li.item-container {
-  width: 24%;
+  width: 18%;
   border-radius: 5px;
   position: relative;
   list-style: none;
@@ -421,13 +489,17 @@ li.item-container div.outer div.inner {
 
 //#### NEXT PROJECT:
 #clocker-mobile-title {
-  width: 66%;
-  margin-left: 17%;
-  margin-top: 18%;
+  width: 82%;
+  margin-left: 10%;
+  margin-top: 11%;
+}
+
+li.item-container#clocker-mobile {
+  border: none;
 }
 
 #next-item {
-  background-color: yellow;
+  // background-color: yellow;
   font-family: Helvetica;
   font-weight: 100;
 }
@@ -600,7 +672,38 @@ li.effect-bubba:hover p {
   transform: translate3d(0,0,0);
 }
 
+.pos-center {
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#height {
+  height: 100vh;
+  // display: -ms-flexbox;
+  // display: -webkit-flex;
+  // display: flex;
+
+  // flex-flow: column;
+  // height: 100%;
+  // align-items: center;
+}
+
+#caption-view {
+  // // flex: 1;
+  // background-color: blue;
+  height: 100%;
+}
+
+#caption {
+  display: inline-block;
+}
+
 .port-caption {
+  display: inline-block;
+  vertical-align: middle;
+
   font-family: shree;
   font-size: 88%;
 }
@@ -620,9 +723,10 @@ li.effect-bubba:hover p {
   right: 0;
 }
 
-#caption-view {
-  height: 33vh;
-}
+// #caption-view {
+//   height: 33vh;
+// }
+
 [ui-view="caption"].ng-enter, [ui-view="caption"].ng-leave {
   position: absolute;
   left: 0;
@@ -677,8 +781,8 @@ li.effect-bubba:hover p {
 }
 
 .wrap {
-  width: 100px;
-  height: 100px;
+  width: 90px;
+  height: 90px;
 }
 
 .center {
@@ -692,8 +796,8 @@ li.effect-bubba:hover p {
 }
 
 .timer {
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
   background-color: transparent;
   border: 6px solid #fff;
   border-radius: 50%;

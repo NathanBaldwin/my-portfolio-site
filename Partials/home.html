@@ -24,6 +24,7 @@
 </nav>
 
 <section id='home'>
+<section id='paralax-pin'>
 
    <div id="title-container" ng-mouseover="showNav()" ng-mouseleave="showSubTitles()">
     <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 1347.33 299.6">
@@ -60,7 +61,8 @@
         </div>
       </div>
     </div>
-  </div>
+    </div>
+  </section>
 </section>
 
 <section id="about-me-section" class="container-flex">
@@ -118,7 +120,9 @@
       <div ui-view></div>
     </div>
     <div  id="caption-view">
-      <div ui-view="caption" class="pos-center view-margin"></div>
+      <!-- <div id='caption'>centering test</div> -->
+      <div ui-view="caption" id='caption' class="pos-center view-margin"></div>
+      <!-- <div id='caption-end'>End</div> -->
     </div>
   </div>
 <!-- </div>
