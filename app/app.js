@@ -31,6 +31,13 @@ app.config(function($stateProvider, $urlRouterProvider) {
       }
     }
   })
+  .state('home.movieBuff', {
+    views: {
+      'caption@home': {
+        templateUrl: "Partials/moviebuffCaption.html"
+      }
+    }
+  })
   .state('home.noCaption', {
     views: {
       'caption@home': {

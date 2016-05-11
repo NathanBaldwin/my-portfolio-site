@@ -510,9 +510,22 @@ li.item-container#clocker-mobile {
 
 // #### THRID PROJECT:
 #third-item {
-  background-color: blue;
+  background: #50a3a2;
+  background: -webkit-linear-gradient(top left, #50a3a2 0%, #53e3a6 100%);
+  background: linear-gradient(to bottom right, #50a3a2 0%, #53e3a6 100%);
+  // background-color: red;
   font-family: Helvetica;
   font-weight: 100;
+}
+
+#movieBuffLogo {
+  margin-left: 12%;
+  margin-top: 14%;
+}
+
+#movieBuffLink {
+  width: 90%;
+  left: 20%;
 }
 
 // ### FOURTH PROJECT:
@@ -568,10 +581,10 @@ li.photo-item-container {
 li.effect-bubba figcaption::before,
 li.effect-bubba figcaption::after {
   position: absolute;
-  top: 25px;
-  right: 25px;
-  bottom: 25px;
-  left: 25px;
+  top: 3%;
+  right: 3%;
+  bottom: 3%;
+  left: 3%;
   content: '';
   opacity: 0;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;

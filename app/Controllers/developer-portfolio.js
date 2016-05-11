@@ -29,6 +29,10 @@ app.controller("developer-portfolio", ["$scope", "$routeParams", "$state",
     $state.go('home.clockerMobile')
   }
 
+  $scope.showMovieBuffCaption = function () {
+    $state.go('home.movieBuff')
+  }
+
   $scope.hideCaption = function () {
     $state.go('home.noCaption');
   }
