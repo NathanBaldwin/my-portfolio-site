@@ -731,9 +731,7 @@ li.effect-bubba:hover p {
   margin-top: 7px; }
 
 #technologies {
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-bottom: 10px;
+  padding: 10px;
   background-color: white;
   position: relative;
   z-index: 5; }
@@ -743,7 +741,7 @@ li.effect-bubba:hover p {
 
 .thumbnail {
   border: none;
-  width: 98%; }
+  margin: 0 auto; }
 
 #technologies div div div.container {
   margin-left: 1%;
@@ -804,9 +802,21 @@ li.effect-bubba:hover p {
   display: block;
   padding: 0 20px; }
 
+.last-row {
+  margin-bottom: 20px; }
+
 .home-popover span {
   display: block;
   font-weight: 700; }
+
+#ditalOceanLogo {
+  margin-top: 8%; }
+
+#gulpLogo {
+  height: 94%; }
+
+#gsapLogo {
+  margin-top: 12%; }
 
 #contact-hidden {
   visibility: hidden;
