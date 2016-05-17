@@ -10,6 +10,9 @@ html, body {
   overflow-x: hidden;
   margin: 0; }
 
+svg#Layer_1 {
+  overflow: visible; }
+
 h1 {
   margin: 5px 0px 10px; }
 
@@ -99,8 +102,9 @@ div.site-nav ul.nav li.nav-option a {
 
 #title-container {
   padding-top: 12%;
-  padding-left: 8%;
-  padding-right: 14%; }
+  margin: 0 auto;
+  width: 80%;
+  padding-right: 3%; }
 
 #subtitles-container {
   margin-top: 3%;
@@ -213,6 +217,9 @@ div.site-nav ul.nav li.nav-option a {
   div.wrap.center.clock {
     display: none; }
 
+  h2 {
+    font-size: 4.2em; }
+
   img#clocker-title {
     margin-top: 34%; }
 
@@ -220,7 +227,7 @@ div.site-nav ul.nav li.nav-option a {
     font-size: 3em; }
 
   div.port-caption p {
-    font-size: 1.1em; }
+    font-size: 1em; }
 
   div #technologies div div div h4 {
     font-size: 70%; }
@@ -230,10 +237,10 @@ div.site-nav ul.nav li.nav-option a {
     padding-top: 33px; }
 
   #about-me-section div div div h1 {
-    font-size: 5em; }
+    font-size: 4.3em; }
 
   div.about-container div p {
-    font-size: 1.2em; }
+    font-size: 1.1em; }
 
   h1#connect-title {
     font-size: 3em; }
@@ -246,7 +253,22 @@ div.site-nav ul.nav li.nav-option a {
 
   img.comingSoon {
     margin-top: 20px;
-    margin-left: 6px; } }
+    margin-left: 6px; }
+
+  #title-container {
+    width: 90%; } }
+@media (max-width: 340px) {
+  h3 {
+    font-size: 90%; }
+
+  div.port-caption p {
+    font-size: 85%; }
+
+  div.view-margin {
+    margin-top: 10px; }
+
+  .portfolio-title {
+    padding-top: 19px; } }
 @media (min-width: 768px) {
   .about-container {
     display: -ms-flex;
@@ -401,9 +423,14 @@ li.item-container#clocker-mobile {
   left: 20%; }
 
 #fourth-item {
-  background-color: orange;
+  background-color: #ffbb22;
   font-family: Helvetica;
   font-weight: 100; }
+
+img#taskMasterLogo {
+  margin-left: 9%;
+  margin-top: 16%;
+  width: 84%; }
 
 li.photo-item-container {
   width: 10.2%;

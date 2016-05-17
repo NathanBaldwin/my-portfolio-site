@@ -38,6 +38,13 @@ app.config(function($stateProvider, $urlRouterProvider) {
       }
     }
   })
+  .state('home.taskMaster', {
+    views: {
+      'caption@home': {
+        templateUrl: "Partials/taskMasterCaption.html"
+      }
+    }
+  })
   .state('home.noCaption', {
     views: {
       'caption@home': {
