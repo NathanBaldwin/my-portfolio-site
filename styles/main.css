@@ -305,6 +305,27 @@ div.site-nav ul.nav li.nav-option a {
 
   #me {
     display: block; } }
+@media (max-height: 650px) {
+  ul li.item-container div.outer {
+    padding-top: 66%; }
+
+  h2.portfolio-title {
+    padding-top: 12px;
+    font-size: 4.4em;
+    margin-bottom: 0px; }
+
+  div.port-caption p {
+    font-size: 100%; }
+
+  a h3 {
+    font-size: 145%; }
+
+  div#pinContainer {
+    padding-top: 0px;
+    padding-bottom: 0px; }
+
+  div.view-margin {
+    margin-top: 10px; } }
 #portfolio {
   background-color: #F7F7F7;
   position: relative;
