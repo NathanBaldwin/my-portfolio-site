@@ -315,7 +315,7 @@ div.site-nav ul.nav li.nav-option a {
     margin-bottom: 0px; }
 
   div.port-caption p {
-    font-size: 100%; }
+    font-size: 110%; }
 
   a h3 {
     font-size: 145%; }
@@ -452,8 +452,9 @@ li.item-container#clocker-mobile {
   margin-top: 14%; }
 
 #movieBuffLink {
-  width: 78%;
-  left: 10%; }
+  width: 67%;
+  left: 17%;
+  top: 22%; }
 
 #fourth-item {
   background-color: #ffbb22;
@@ -462,7 +463,7 @@ li.item-container#clocker-mobile {
 
 img#taskMasterLogo {
   margin-left: 9%;
-  margin-top: 16%;
+  margin-top: 14%;
   width: 84%; }
 
 li.photo-item-container {
